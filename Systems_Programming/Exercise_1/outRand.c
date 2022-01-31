@@ -1,3 +1,10 @@
+/*
+    Aurhor: Alexander Kellough
+    MSU Student ID: atk133
+    Compiler: GCC
+    Description:
+        Genarates random numbers/offsets and writes them to file to imitate device input on a unix operatin system.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -5,12 +12,14 @@
 #include <sys/stat.h>
 #include <time.h>
 
+// Union to remove unused bytes from integer before writing to file.
 union ISTR
 {
     int val;
     char bytes[4];
 };
 
+// Generates random integer and offset; returns offset average from ranges.
 int randInt(int low, int middle, int high)
 {             
     int range = 101;
@@ -28,7 +37,8 @@ int randInt(int low, int middle, int high)
         return (high + offset) * 100;
     }
     return (middle + offset) * 100;
-}
+}                                                                          
+
 int main(int argc, char *argv[])
 {
     int i = 0;
@@ -41,14 +51,17 @@ int main(int argc, char *argv[])
     mode_t perms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP;
     union ISTR out;
 
+    // Seeds random function
     srand(time(NULL));
 
+    // Checks command line argument syntax
     if(argc != 1 && argc != 3 && argc != 6)
     {
          printf("sntax: outRand <filename> <number> or outRand <filename> <number> <low> <middle> <high>\n");
          exit(EXIT_SUCCESS);
     }
 
+    // Converts comand line arguments to appropriate types.
     if(argc == 3)
     {
         sscanf(argv[1], "%s", filename);    
@@ -64,8 +77,10 @@ int main(int argc, char *argv[])
         sscanf(argv[5], "%d", &high);     
     }
 
+    // Opens file
     fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, perms);
     
+    // Generates random numbers using randInt and writesthem to file.
     for(i = 0; i < number; i++)
     {
         val = randInt(low, middle, high); 
@@ -80,7 +95,8 @@ int main(int argc, char *argv[])
         }
     }
 
+    // Closes file.
     close(fd);
-
-    return 0;
+    
+    exit(EXIT_SUCCESS);
 }

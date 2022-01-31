@@ -20,7 +20,6 @@ int push_back(struct List *list, char *new_data)
     if(list->head == NULL)
     {
         list->head = n;
-        list->head->next = list->tail;
         list->tail = n;
     }
     else
@@ -32,18 +31,30 @@ int push_back(struct List *list, char *new_data)
     return 1;
 }
 
-int pop_back(struct List *list, char **ret_data)
+int pop_back(struct List *list, char *ret_data)
 {
-    struct Node *tmp = NULL;
     if(list == NULL) return 0;
     if(list->head == NULL) return 0;
 
-    tmp = list->tail;
-    list->tail = tmp->prev;
-    tmp->prev = NULL;
-    *ret_data = tmp->data;
-    free(tmp);
+    struct Node *n = list->tail;
     
+    ret_data = n-> data;
+    
+    if(n == list->head)
+    {
+        list->head = NULL;    
+        list->tail = NULL;
+    }
+    
+    else
+    {
+        list->tail = list->tail->prev;
+        list->tail->next = NULL;
+        n->prev = NULL;
+    }
+
+    free(n);
+
     return 1;
 }
  

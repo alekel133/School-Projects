@@ -20,6 +20,6 @@ struct List
 
 struct List *makelist();
 int push_back(struct List *list, char *new_data);
-int pop_back(struct List *list, char **ret_data);
+int pop_back(struct List *list, char *ret_data);
 
 #endif

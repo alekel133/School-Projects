@@ -1,5 +1,14 @@
+/*
+    Author: Alexander Kellough
+    MSU NetID: atk133
+    Compiler: GCC
+    Description:
+        List function definitions.
+
+ */
 #include "List.h"
 
+// List destructor
 List::~List()
 {
     Node* tmp = tail;
@@ -12,6 +21,7 @@ List::~List()
     }
 }
 
+// Insert fucntion, adds new node with provided data.
 void List::insert(std::string data) 
 {
     Node* tmp = new Node(data);
@@ -28,7 +38,8 @@ void List::insert(std::string data)
     }
     tail = tmp;
 }
-   
+
+// Prints list in reverse
 bool List::reverse(std::ostream &os)
 {
     if(head == nullptr)

@@ -1,3 +1,10 @@
+/*
+    Author: Alexander Kellough
+    MSU NetID: atk133
+    Compiler: GCC
+    Description:
+        Linked List class decleration.
+*/
 #include "Node.h"
 #include <iostream>
 #pragma once

@@ -1,3 +1,10 @@
+/*
+    Author: Alexander Kellough
+    MSU NetID: atk133
+    Compiler: GCC
+    Description:
+        Node class decleration. 
+ */
 #include <string>
 #pragma once
 

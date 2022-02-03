@@ -1,3 +1,11 @@
+/*
+    Author: Alexander Kellough
+    MSU NetID: atk133
+    Compiler: GCC
+    Description:
+        Program that takes input, stores it in a linked list, and outputs the data in reverse.
+
+ */
 #include <iostream>
 #include "List.h"
 
@@ -13,6 +21,7 @@ int main()
 
     cout << "Enter strings to be reversed. Enter [STOP] when finished:" << endl;
 
+    // Input loop
     while(input != "STOP")
     {
         cin >> input;
@@ -21,7 +30,8 @@ int main()
     }
 
     cout << endl << "Reversed: " << endl;
-
+    
+    // Call to linked list reverse function.
     list.reverse(cout);
 
     return 0;

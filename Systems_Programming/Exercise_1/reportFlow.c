@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 
         if(reset == -1) // If a report was printed, prints readings since last report and resets count.
         {
-            printf("%d readings since last report.\n", i);
+            printf("%d reading(s) since last report.\n", i);
             i = 0;
         } 
     }

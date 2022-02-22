@@ -8,10 +8,13 @@
 #include <stdlib.h>
 
 /* Problem 1  */
+#include <fcntl.h>
+#include <sys/stat.h>
 #include <unistd.h>
 #include <string.h>
 #include <signal.h>
 #include <errno.h>
+#include <sys/time.h>
 
 #define BUF_SIZE 1024
 
@@ -38,9 +41,9 @@ int myPrint(const char *str)
 int myPrintInt(const int val)
 {
 /* Problem 3 */ 
-    char *str;
+    char *str = (char *) malloc(sizeof(int));
     int pass = val;
-    sscanf(str, "%d", &pass);
+    sprintf(str, "%d", pass);
     if(myPrint(str) == 0) 
         return 0;
     return 1;
@@ -53,12 +56,15 @@ int myPrintInt(const int val)
 void signalHandler(int sig)
 {
 /* Problem 4 */
+    int state;
     if(sig == SIGINT)
     {
-        char *reply;
+        char reply[2];
         write(1,"Do you wish to exit?{y/n}\n", 27);
-        read(STDIN_FILENO, reply, 2);
-        if(strcmp(reply, "y") == 0 || strcmp(reply, "Y") == 0)
+        state = read(0, reply, 2);
+        if(state == -1)
+            return;
+        if(reply[0] == 'y' || reply[0] == 'Y')
             exit(EXIT_SUCCESS);
         else
             return;
@@ -74,17 +80,31 @@ void signalHandler(int sig)
 int readLine(int fd, char *line)
 {
 /* Problem 5 */
-char *buf;
-int i = 0;
-    while(*buf != '\n')
+    char buf [1024];
+    char cha = ' ';
+    int state;
+    int i = 0;
+    while(cha != '\n' && cha != '\r' && cha != '\0')
     {
-       read(fd, buf, 1);        
-       if(*buf == '\0')
-           return 0;
-       line[i] = *buf;
-       ++i;
+        state = read(fd, &cha, 1);
+        if(state == -1 || state == 0)
+            return 0;
+        if(cha == '\0')
+            break;
+        if(cha == '\r')
+            break;
+        if(cha == '\n')
+            break;
+        if(cha == EOF)
+            break;
+        buf[i] = cha;
+        ++i;
     }
-    return i;
+    buf[i] = '\0';
+    strcpy(line, buf);
+    if(i == 0)
+        return 0;
+    return 1;
 }
 
 
@@ -116,6 +136,7 @@ int main(int argc, char *argv[])
 
  /* Problem 6a*/
 struct sigaction sa;
+struct itimerval tvOn, tvOff;
 
  /* Problem 6b */ 
 sigemptyset(&sa.sa_mask);
@@ -125,16 +146,34 @@ sa.sa_handler = signalHandler;
 sa.sa_flags = 0;
 
 /* Problem 6c */
-
+tvOn.it_value.tv_sec = 3;
+tvOn.it_value.tv_usec = 0;
+tvOn.it_interval.tv_sec = 0;
+tvOn.it_interval.tv_usec = 0;
 
 /* Problem 6d */
+tvOff.it_value.tv_sec = 0;
+tvOff.it_value.tv_usec = 0;
+tvOff.it_interval.tv_sec = 0;
+tvOff.it_interval.tv_usec = 0;
 
 
 /* Problem 7 */
 
-  
+if(sigaction(SIGINT, &sa, NULL) == -1)
+{
+    perror("sigaction");
+    exit(EXIT_FAILURE);
+} 
+if(sigaction(SIGALRM, &sa, NULL) == -1)
+{
+    perror("sigaction");
+    exit(EXIT_FAILURE);
+}
 
 /* Problem 8  */
+questFd = open("quest.txt", O_RDONLY);
+ansFd = open("ans.txt", O_RDONLY);
     
    /* this loop handles the Q/A stuff 
     * I have included some of it to make you life simpler 
@@ -157,11 +196,18 @@ sa.sa_flags = 0;
       /* now set the interval timer prior to reading in the user's response */
 
  /*  Problem 9 */
+      if(setitimer(ITIMER_REAL, &tvOn, NULL) == -1)
+      {
+            perror("setitimer");
+            exit(EXIT_FAILURE);
+      
+      }
 
       /* read in the user's response, this is systems programming so don't use 
        * scanf */
 
  /* Problem 10 */
+      numRead = readLine(0, buf);
 
       /* test to see if the user responded and if an error has occurred 
        * an error can actually occur as part of the functionality of this program 
@@ -192,7 +238,7 @@ sa.sa_flags = 0;
 	}
       /* disable the timer here */
 /* Problem 11*/
-
+    setitimer(ITIMER_REAL, &tvOff, NULL);
       /* we will convert the buf being read in to a c-string by tacking on a 0 */
 	buf[numRead-1] = 0;
 	/* check the answer */

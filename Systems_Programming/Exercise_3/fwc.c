@@ -2,12 +2,14 @@
 
 int main(int argc, char *argv[])
 {
-    int rw, rc, i, j, isSpace, bval;    
-    int fd = STDIN_FILENO; 
+    int rw, rc, i, j, bval;    
+    int file = 0;
+    int isSpace = 0;
+    int fd = 0; 
     int wc = 0;
     int cc = 0;
-    char filename[100] = " ";
-    char *buf;
+    char filename[100];
+    char buf = ' ';
  
 
     for(i = 0; i < argc; ++i) 
@@ -23,7 +25,9 @@ int main(int argc, char *argv[])
             } 
         }
         else
+        {
             strcpy(filename, argv[i]);
+        }
     }
 
     if(rw == 0 && rc == 0)
@@ -32,40 +36,60 @@ int main(int argc, char *argv[])
         rc = 1;
     }
 
+    if(strlen(filename) > 0)
+        fd = open(filename, O_RDONLY);
+    
+    if(fd == -1)
+    {
+        perror("open");
+        exit(EXIT_FAILURE);
+    }
+
     while(1)
     {
-        bval = read(fd, buf, 1);
+        bval = read(fd, &buf, 1);
         
-        if(bval != 1)
-            break;
+        if(bval == -1)
+        {
+            perror("read");
+            exit(EXIT_FAILURE);
+        }
 
-        if(*buf == EOF)
+        if(bval == 0)
+        {
+            if(!isSpace)
+                ++wc;
             break;
+        }
 
-        if(*buf == ' ' || *buf == '\n')
+        if(buf != ' ')
+        {
+            if(isSpace)
+            {
+                isSpace = 0;
+                ++wc;
+            }
+        }
+
+        if(buf == ' ') 
         {
             isSpace = 1;
         }
-
-        if(isSpace != 1 && *buf != ' ' && *buf != '\n')
-        {
-            ++wc;
-            isSpace = 0;
-        }
-
         ++cc;
-    }
-
-    if(rc == 1)
-    {
-        printf("    %d", cc);
     }
 
     if(rw == 1)
     {
-        printf("    %d", wc); 
+        printf("    %d", wc);
+    }
+
+    if(rc == 1)
+    {
+        printf("    %d", cc); 
     }
 
     printf("    ");
+
+    close(fd);
     exit(EXIT_SUCCESS);
 }

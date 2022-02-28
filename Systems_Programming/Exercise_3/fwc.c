@@ -1,3 +1,10 @@
+/*
+ * Author: Alexander Kellough
+ * NetID: atk133
+ * Compiler: GCC
+ * Description:
+ *     Program emulates the behavior of the wc command.
+ */
 #include "hdrs.h"
 
 int main(int argc, char *argv[])
@@ -12,7 +19,8 @@ int main(int argc, char *argv[])
     char buf = ' ';
  
 
-    for(i = 0; i < argc; ++i) 
+    // Scans in command line arguments and sets flags.
+    for(i = 0; i < argc - 1; ++i) 
     {
         if(argv[i][0] == '-')
         {
@@ -26,44 +34,57 @@ int main(int argc, char *argv[])
         }
         else
         {
-            strcpy(filename, argv[i]);
+            sprintf(filename, "%s", argv[1]);
+            file = 1; 
         }
     }
 
+    // Sets default behavior if no flags are given.
     if(rw == 0 && rc == 0)
     {
         rw = 1;
         rc = 1;
     }
 
-    if(strlen(filename) > 0)
+    // If a file is give, opens it.
+    if(file)
+    {
         fd = open(filename, O_RDONLY);
-    
+    }
+
+    // Checks open system call
     if(fd == -1)
     {
         perror("open");
         exit(EXIT_FAILURE);
     }
 
+    // Main loop
     while(1)
     {
+        // Reads bytes one at a time.
         bval = read(fd, &buf, 1);
         
+        // Checks the read system call.
         if(bval == -1)
         {
             perror("read");
             exit(EXIT_FAILURE);
         }
 
-        if(bval == 0)
+        // If no info is read
+        if(bval == 0)            
         {
+            // If previos read wasn't a space, increase word count.
             if(!isSpace)
                 ++wc;
             break;
         }
 
+        // If the character is not a space.
         if(buf != ' ')
         {
+            // If last char was a space, set isSpace to 0 and increment word count
             if(isSpace)
             {
                 isSpace = 0;
@@ -71,6 +92,7 @@ int main(int argc, char *argv[])
             }
         }
 
+        // If read returns a space, set space flag.
         if(buf == ' ') 
         {
             isSpace = 1;
@@ -78,17 +100,20 @@ int main(int argc, char *argv[])
         ++cc;
     }
 
+    /* Output, close, and exit. */
+    printf("    ");
+
     if(rw == 1)
     {
-        printf("    %d", wc);
+        printf("%d ", wc);
     }
 
     if(rc == 1)
     {
-        printf("    %d", cc); 
+        printf("%d ", cc); 
     }
 
-    printf("    ");
+    printf(" %s\n", filename);
 
     close(fd);
     exit(EXIT_SUCCESS);

@@ -1,0 +1,22 @@
+INFO: Using the punctuation.pas file for input
+line: 1, lexeme: |;|, length: 1, token: TOK_SEMICOLON
+line: 2, lexeme: |:|, length: 1, token: TOK_COLON
+line: 3, lexeme: |(|, length: 1, token: TOK_OPENPAREN
+line: 4, lexeme: |)|, length: 1, token: TOK_CLOSEPAREN
+line: 7, lexeme: |)|, length: 1, token: TOK_CLOSEPAREN
+line: 7, lexeme: |(|, length: 1, token: TOK_OPENPAREN
+line: 7, lexeme: |:|, length: 1, token: TOK_COLON
+line: 7, lexeme: |:|, length: 1, token: TOK_COLON
+line: 7, lexeme: |:|, length: 1, token: TOK_COLON
+line: 7, lexeme: |:|, length: 1, token: TOK_COLON
+line: 7, lexeme: |:|, length: 1, token: TOK_COLON
+line: 7, lexeme: |;|, length: 1, token: TOK_SEMICOLON
+line: 7, lexeme: |;|, length: 1, token: TOK_SEMICOLON
+line: 7, lexeme: |;|, length: 1, token: TOK_SEMICOLON
+line: 7, lexeme: |;|, length: 1, token: TOK_SEMICOLON
+line: 7, lexeme: |;|, length: 1, token: TOK_SEMICOLON
+line: 7, lexeme: |(|, length: 1, token: TOK_OPENPAREN
+line: 7, lexeme: |)|, length: 1, token: TOK_CLOSEPAREN
+line: 8, lexeme: |(|, length: 1, token: TOK_OPENPAREN
+line: 8, lexeme: |)|, length: 1, token: TOK_CLOSEPAREN
+Found end of file...

@@ -1,0 +1,42 @@
+INFO: Using the 1-hello.pas file for input
+found |PROGRAM| PROGRAM
+enter <program>
+|  found |HELLO| IDENTIFIER
+|  found |;| SEMICOLON
+|  found |BEGIN| BLOCK
+|  enter <block>
+|  |  found |BEGIN| BEGIN
+|  |  enter <compound_stmt>
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |'Hello World!'| WRITE
+|  |  |  |  'Hello World!'
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  found |END| END
+|  |  exit <compound_stmt>
+|  exit <block>
+exit <program>
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+*** Print the Tree ***
+
+(program 
+|  (block 
+|  |  (compound_stmt
+|  |  |  (write_stmt ( 'Hello World!' )
+|  |  |  write_stmt)
+|  |  compound_stmt)
+|  block) 
+program) 
+
+
+*** User Defined Symbols ***
+
+*** Delete the Tree ***
+Deleting ProgramNode
+Deleting BlockNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:WriteStmtNode

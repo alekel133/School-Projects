@@ -1,0 +1,27 @@
+ enter E 1
+ enter T 1
+ enter F 1
+-->found (
+  enter E 2
+  enter T 2
+  enter F 2
+-->found ID: sum
+  exit F 2
+  exit T 2
+-->found +
+   enter T 3
+   enter F 3
+-->found INTLIT: 47
+   exit F 3
+   exit T 3
+  exit E 2
+-->found )
+ exit F 1
+-->found /
+    enter F 4
+-->found ID: total
+    exit F 4
+ exit T 1
+ exit E 1
+
+=== GO BULLDOGS! Your parse was successful! ===

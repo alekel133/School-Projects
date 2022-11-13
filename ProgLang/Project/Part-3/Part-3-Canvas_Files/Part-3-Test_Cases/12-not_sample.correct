@@ -1,0 +1,224 @@
+INFO: Using the 12-not_sample.pas file for input
+found |PROGRAM| PROGRAM
+enter <program>
+|  found |NOTEX| IDENTIFIER
+|  found |;| SEMICOLON
+|  found |VAR| BLOCK
+|  enter <block>
+|  |  found |A| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |A| idType: |INTEGER| --
+|  |  found |BEGIN| BEGIN
+|  |  enter <compound_stmt>
+|  |  |  found |A| STATEMENT
+|  |  |  enter <assignment>
+|  |  |  |  found |A| IDENTIFIER
+|  |  |  |  A
+|  |  |  |  found |:=| ASSIGN
+|  |  |  |  found |0| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |0| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |0| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |0| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |0| INTLIT
+|  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  exit <assignment>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |IF| STATEMENT
+|  |  |  enter <if>
+|  |  |  |  found |NOT| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |NOT| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |NOT| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |NOT| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |NOT| NOT
+|  |  |  |  |  |  |  |  NOT
+|  |  |  |  |  |  |  |  found |A| FACTOR
+|  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  found |A| IDENTIFIER
+|  |  |  |  |  |  |  |  |  A
+|  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  |  found |THEN| THEN
+|  |  |  |  found |WRITE| STATEMENT
+|  |  |  |  enter <write>
+|  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  found |'TRUE'| WRITE
+|  |  |  |  |  'TRUE'
+|  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  exit <write>
+|  |  |  found |ELSE| ELSE
+|  |  |  enter <else>
+|  |  |  |  found |A| STATEMENT
+|  |  |  |  enter <assignment>
+|  |  |  |  |  found |A| IDENTIFIER
+|  |  |  |  |  A
+|  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  found |NOT| EXPRESSION
+|  |  |  |  |  enter <expression>
+|  |  |  |  |  |  found |NOT| SIMPLE_EXP
+|  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  found |NOT| TERM
+|  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  found |NOT| FACTOR
+|  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  found |NOT| NOT
+|  |  |  |  |  |  |  |  |  NOT
+|  |  |  |  |  |  |  |  |  found |(| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  |  |  |  (
+|  |  |  |  |  |  |  |  |  |  found |3| EXPRESSION
+|  |  |  |  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  |  |  |  found |3| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  |  |  found |3| TERM
+|  |  |  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  |  |  found |3| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  found |3| INTLIT
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  3
+|  |  |  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  |  |  found |<| LESSTHAN
+|  |  |  |  |  |  |  |  |  |  |  <
+|  |  |  |  |  |  |  |  |  |  |  found |4| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  |  |  found |4| TERM
+|  |  |  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  |  |  found |4| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  found |4| INTLIT
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  4
+|  |  |  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  exit <expression>
+|  |  |  |  exit <assignment>
+|  |  |  exit <if>
+|  |  found |END| END
+|  |  exit <compound_stmt>
+|  exit <block>
+exit <program>
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+*** Print the Tree ***
+
+(program 
+|  (block 
+|  |  (compound_stmt
+|  |  |  (assignment_stmt ( A := )
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( INTLIT: 0 ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  assignment_stmt)
+|  |  |  (if_stmt 
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor (NOT 
+|  |  |  |  |  |  |  |  (factor ( IDENT: A ) 
+|  |  |  |  |  |  |  |  factor) ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  (then 
+|  |  |  |  (write_stmt ( 'TRUE' )
+|  |  |  |  write_stmt)
+|  |  |  then) 
+|  |  |  (else 
+|  |  |  |  (assignment_stmt ( A := )
+|  |  |  |  |  (expression 
+|  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  (factor (NOT 
+|  |  |  |  |  |  |  |  |  (factor ( 
+|  |  |  |  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (factor ( INTLIT: 3 ) 
+|  |  |  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  |  |  < 
+|  |  |  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (factor ( INTLIT: 4 ) 
+|  |  |  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  |  |  expression) )
+|  |  |  |  |  |  |  |  |  factor) ) 
+|  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  expression) 
+|  |  |  |  assignment_stmt)
+|  |  |  else) 
+|  |  |  if_stmt)
+|  |  compound_stmt)
+|  block) 
+program) 
+
+
+*** User Defined Symbols ***
+A
+
+*** Delete the Tree ***
+Deleting ProgramNode
+Deleting BlockNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:IfStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:NotNode
+Deleting FactorNode:IdNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:NotNode
+Deleting FactorNode:NestedExprNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode

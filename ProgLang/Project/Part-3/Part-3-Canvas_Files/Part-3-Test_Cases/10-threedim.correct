@@ -1,0 +1,741 @@
+INFO: Using the 10-threedim.pas file for input
+found |PROGRAM| PROGRAM
+enter <program>
+|  found |THREEDIM| IDENTIFIER
+|  found |;| SEMICOLON
+|  found |VAR| BLOCK
+|  enter <block>
+|  |  found |XAXIS| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |XAXIS| idType: |INTEGER| --
+|  |  found |YAXIS| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |YAXIS| idType: |INTEGER| --
+|  |  found |ZAXIS| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |ZAXIS| idType: |INTEGER| --
+|  |  found |X| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |X| idType: |INTEGER| --
+|  |  found |Y| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |Y| idType: |INTEGER| --
+|  |  found |Z| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |Z| idType: |INTEGER| --
+|  |  found |BEGIN| BEGIN
+|  |  enter <compound_stmt>
+|  |  |  found |X| STATEMENT
+|  |  |  enter <assignment>
+|  |  |  |  found |X| IDENTIFIER
+|  |  |  |  X
+|  |  |  |  found |:=| ASSIGN
+|  |  |  |  found |0| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |0| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |0| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |0| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |0| INTLIT
+|  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  exit <assignment>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |Y| STATEMENT
+|  |  |  enter <assignment>
+|  |  |  |  found |Y| IDENTIFIER
+|  |  |  |  Y
+|  |  |  |  found |:=| ASSIGN
+|  |  |  |  found |0| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |0| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |0| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |0| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |0| INTLIT
+|  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  exit <assignment>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |Z| STATEMENT
+|  |  |  enter <assignment>
+|  |  |  |  found |Z| IDENTIFIER
+|  |  |  |  Z
+|  |  |  |  found |:=| ASSIGN
+|  |  |  |  found |0| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |0| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |0| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |0| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |0| INTLIT
+|  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  exit <assignment>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |'How big is your cube? (x,y,z)?'| WRITE
+|  |  |  |  'How big is your cube? (x,y,z)?'
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |READ| STATEMENT
+|  |  |  enter <read>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |XAXIS| IDENTIFIER
+|  |  |  |  XAXIS
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <read>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |READ| STATEMENT
+|  |  |  enter <read>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |YAXIS| IDENTIFIER
+|  |  |  |  YAXIS
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <read>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |READ| STATEMENT
+|  |  |  enter <read>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |ZAXIS| IDENTIFIER
+|  |  |  |  ZAXIS
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <read>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WHILE| STATEMENT
+|  |  |  enter <while>
+|  |  |  |  found |Z| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |Z| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |Z| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |Z| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |Z| IDENTIFIER
+|  |  |  |  |  |  |  |  Z
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  found |<| LESSTHAN
+|  |  |  |  |  <
+|  |  |  |  |  found |ZAXIS| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |ZAXIS| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |ZAXIS| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |ZAXIS| IDENTIFIER
+|  |  |  |  |  |  |  |  ZAXIS
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  |  found |BEGIN| STATEMENT
+|  |  |  |  found |BEGIN| BEGIN
+|  |  |  |  enter <compound_stmt>
+|  |  |  |  |  found |WRITE| STATEMENT
+|  |  |  |  |  enter <write>
+|  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  found |'Starting a new z-level'| WRITE
+|  |  |  |  |  |  'Starting a new z-level'
+|  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  exit <write>
+|  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  found |WHILE| STATEMENT
+|  |  |  |  |  enter <while>
+|  |  |  |  |  |  found |X| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |X| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |X| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |X| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |X| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  X
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  found |<| LESSTHAN
+|  |  |  |  |  |  |  <
+|  |  |  |  |  |  |  found |XAXIS| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |XAXIS| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |XAXIS| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |XAXIS| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  XAXIS
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  found |BEGIN| STATEMENT
+|  |  |  |  |  |  found |BEGIN| BEGIN
+|  |  |  |  |  |  enter <compound_stmt>
+|  |  |  |  |  |  |  found |WHILE| STATEMENT
+|  |  |  |  |  |  |  enter <while>
+|  |  |  |  |  |  |  |  found |Y| EXPRESSION
+|  |  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  |  found |Y| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  found |Y| TERM
+|  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  found |Y| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  found |Y| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  |  Y
+|  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  found |<| LESSTHAN
+|  |  |  |  |  |  |  |  |  <
+|  |  |  |  |  |  |  |  |  found |YAXIS| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  found |YAXIS| TERM
+|  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  found |YAXIS| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  found |YAXIS| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  |  YAXIS
+|  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  |  |  found |BEGIN| STATEMENT
+|  |  |  |  |  |  |  |  found |BEGIN| BEGIN
+|  |  |  |  |  |  |  |  enter <compound_stmt>
+|  |  |  |  |  |  |  |  |  found |WRITE| STATEMENT
+|  |  |  |  |  |  |  |  |  enter <write>
+|  |  |  |  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  |  |  |  found |X| WRITE
+|  |  |  |  |  |  |  |  |  |  X
+|  |  |  |  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  |  |  |  exit <write>
+|  |  |  |  |  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  |  |  |  |  found |WRITE| STATEMENT
+|  |  |  |  |  |  |  |  |  enter <write>
+|  |  |  |  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  |  |  |  found |Y| WRITE
+|  |  |  |  |  |  |  |  |  |  Y
+|  |  |  |  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  |  |  |  exit <write>
+|  |  |  |  |  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  |  |  |  |  found |WRITE| STATEMENT
+|  |  |  |  |  |  |  |  |  enter <write>
+|  |  |  |  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  |  |  |  found |Z| WRITE
+|  |  |  |  |  |  |  |  |  |  Z
+|  |  |  |  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  |  |  |  exit <write>
+|  |  |  |  |  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  |  |  |  |  found |WRITE| STATEMENT
+|  |  |  |  |  |  |  |  |  enter <write>
+|  |  |  |  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  |  |  |  found |' '| WRITE
+|  |  |  |  |  |  |  |  |  |  ' '
+|  |  |  |  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  |  |  |  exit <write>
+|  |  |  |  |  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  |  |  |  |  found |Y| STATEMENT
+|  |  |  |  |  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  |  |  |  |  found |Y| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  Y
+|  |  |  |  |  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  |  |  |  |  found |Y| EXPRESSION
+|  |  |  |  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  |  |  |  found |Y| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  |  |  found |Y| TERM
+|  |  |  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  |  |  found |Y| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  found |Y| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  Y
+|  |  |  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  |  |  |  found |+| PLUS
+|  |  |  |  |  |  |  |  |  |  |  |  +
+|  |  |  |  |  |  |  |  |  |  |  |  found |1| TERM
+|  |  |  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  |  |  found |1| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  found |1| INTLIT
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  |  |  |  exit <assignment>
+|  |  |  |  |  |  |  |  found |END| END
+|  |  |  |  |  |  |  |  exit <compound_stmt>
+|  |  |  |  |  |  |  exit <while>
+|  |  |  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  |  |  found |Y| STATEMENT
+|  |  |  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  |  |  found |Y| IDENTIFIER
+|  |  |  |  |  |  |  |  Y
+|  |  |  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  |  |  found |0| EXPRESSION
+|  |  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  |  found |0| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  found |0| TERM
+|  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  found |0| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  found |0| INTLIT
+|  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  |  exit <assignment>
+|  |  |  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  |  |  found |X| STATEMENT
+|  |  |  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  |  |  found |X| IDENTIFIER
+|  |  |  |  |  |  |  |  X
+|  |  |  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  |  |  found |X| EXPRESSION
+|  |  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  |  found |X| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  found |X| TERM
+|  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  found |X| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  found |X| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  |  X
+|  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  |  found |+| PLUS
+|  |  |  |  |  |  |  |  |  |  +
+|  |  |  |  |  |  |  |  |  |  found |1| TERM
+|  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  found |1| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  found |1| INTLIT
+|  |  |  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  |  exit <assignment>
+|  |  |  |  |  |  found |END| END
+|  |  |  |  |  |  exit <compound_stmt>
+|  |  |  |  |  exit <while>
+|  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  found |X| STATEMENT
+|  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  found |X| IDENTIFIER
+|  |  |  |  |  |  X
+|  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  found |0| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |0| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |0| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |0| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |0| INTLIT
+|  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  exit <assignment>
+|  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  found |Y| STATEMENT
+|  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  found |Y| IDENTIFIER
+|  |  |  |  |  |  Y
+|  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  found |0| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |0| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |0| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |0| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |0| INTLIT
+|  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  exit <assignment>
+|  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  found |Z| STATEMENT
+|  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  found |Z| IDENTIFIER
+|  |  |  |  |  |  Z
+|  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  found |Z| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |Z| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |Z| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |Z| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |Z| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  Z
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  found |+| PLUS
+|  |  |  |  |  |  |  |  +
+|  |  |  |  |  |  |  |  found |1| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |1| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |1| INTLIT
+|  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  exit <assignment>
+|  |  |  |  found |END| END
+|  |  |  |  exit <compound_stmt>
+|  |  |  exit <while>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |'-- Madam, your cube is ready now ---'| WRITE
+|  |  |  |  '-- Madam, your cube is ready now ---'
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  found |END| END
+|  |  exit <compound_stmt>
+|  exit <block>
+exit <program>
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+*** Print the Tree ***
+
+(program 
+|  (block 
+|  |  (compound_stmt
+|  |  |  (assignment_stmt ( X := )
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( INTLIT: 0 ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  assignment_stmt)
+|  |  |  (assignment_stmt ( Y := )
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( INTLIT: 0 ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  assignment_stmt)
+|  |  |  (assignment_stmt ( Z := )
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( INTLIT: 0 ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  assignment_stmt)
+|  |  |  (write_stmt ( 'How big is your cube? (x,y,z)?' )
+|  |  |  write_stmt)
+|  |  |  (read_stmt ( XAXIS )
+|  |  |  read_stmt)
+|  |  |  (read_stmt ( YAXIS )
+|  |  |  read_stmt)
+|  |  |  (read_stmt ( ZAXIS )
+|  |  |  read_stmt)
+|  |  |  (while_stmt 
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( IDENT: Z ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  < 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( IDENT: ZAXIS ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  |  (compound_stmt
+|  |  |  |  |  (write_stmt ( 'Starting a new z-level' )
+|  |  |  |  |  write_stmt)
+|  |  |  |  |  (while_stmt 
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( IDENT: X ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  < 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( IDENT: XAXIS ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  |  (compound_stmt
+|  |  |  |  |  |  |  (while_stmt 
+|  |  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  (factor ( IDENT: Y ) 
+|  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  < 
+|  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  (factor ( IDENT: YAXIS ) 
+|  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  expression) 
+|  |  |  |  |  |  |  |  (compound_stmt
+|  |  |  |  |  |  |  |  |  (write_stmt ( X )
+|  |  |  |  |  |  |  |  |  write_stmt)
+|  |  |  |  |  |  |  |  |  (write_stmt ( Y )
+|  |  |  |  |  |  |  |  |  write_stmt)
+|  |  |  |  |  |  |  |  |  (write_stmt ( Z )
+|  |  |  |  |  |  |  |  |  write_stmt)
+|  |  |  |  |  |  |  |  |  (write_stmt ( ' ' )
+|  |  |  |  |  |  |  |  |  write_stmt)
+|  |  |  |  |  |  |  |  |  (assignment_stmt ( Y := )
+|  |  |  |  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (factor ( IDENT: Y ) 
+|  |  |  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  |  |  + 
+|  |  |  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (factor ( INTLIT: 1 ) 
+|  |  |  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  |  |  expression) 
+|  |  |  |  |  |  |  |  |  assignment_stmt)
+|  |  |  |  |  |  |  |  compound_stmt)
+|  |  |  |  |  |  |  while_stmt)
+|  |  |  |  |  |  |  (assignment_stmt ( Y := )
+|  |  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  (factor ( INTLIT: 0 ) 
+|  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  expression) 
+|  |  |  |  |  |  |  assignment_stmt)
+|  |  |  |  |  |  |  (assignment_stmt ( X := )
+|  |  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  (factor ( IDENT: X ) 
+|  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  + 
+|  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  (factor ( INTLIT: 1 ) 
+|  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  expression) 
+|  |  |  |  |  |  |  assignment_stmt)
+|  |  |  |  |  |  compound_stmt)
+|  |  |  |  |  while_stmt)
+|  |  |  |  |  (assignment_stmt ( X := )
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( INTLIT: 0 ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  assignment_stmt)
+|  |  |  |  |  (assignment_stmt ( Y := )
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( INTLIT: 0 ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  assignment_stmt)
+|  |  |  |  |  (assignment_stmt ( Z := )
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( IDENT: Z ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  + 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( INTLIT: 1 ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  assignment_stmt)
+|  |  |  |  compound_stmt)
+|  |  |  while_stmt)
+|  |  |  (write_stmt ( '-- Madam, your cube is ready now ---' )
+|  |  |  write_stmt)
+|  |  compound_stmt)
+|  block) 
+program) 
+
+
+*** User Defined Symbols ***
+X
+XAXIS
+Y
+YAXIS
+Z
+ZAXIS
+
+*** Delete the Tree ***
+Deleting ProgramNode
+Deleting BlockNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:ReadStmtNode
+Deleting StatementNode:ReadStmtNode
+Deleting StatementNode:ReadStmtNode
+Deleting StatementNode:WhileStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:WhileStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:WhileStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:WriteStmtNode

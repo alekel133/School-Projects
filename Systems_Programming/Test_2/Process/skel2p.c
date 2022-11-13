@@ -1,4 +1,10 @@
-/* Write a multiple concurrent process program that does the following
+/* 
+ *  Author: Alexander Kellough
+ *  NetID: atk133
+ *  Compiler: GCC
+ *
+ *
+ * Write a multiple concurrent process program that does the following
    1. Prompts the user for the number of integers to enter
    2. Prompts the user for each integer and writes them into 
       a file named data.dat
@@ -52,19 +58,6 @@ b.	If the value < 100, signals the parent with SIGUSR2
  */
 
 #define BUF_SIZE 1024
-
-typedef union STOI
-{
-    char bytes[4];
-    int val;
-}STOI;
-
-typedef union ITOS
-{
-    int val;
-    char bytes[4];
-}ITOS;
-
 pid_t children[3];
 int large = 0;
 int small = 0;
@@ -148,7 +141,6 @@ void signalHandlerC(int sig)
 void child1()
 {
     int fd, tot, val, ret;
-    ITOS out;
 
 
     printf("How many integers would you like to enter: ");
@@ -167,8 +159,7 @@ void child1()
         printf("Integer %d: ", i+1);
         scanf("%d", &val);
         printf("\n");
-        out.val = val;
-        ret = write(fd, out.bytes, 4); 
+        ret = write(fd, &val, 4); 
         if(ret == -1)
         {
             perror("write");
@@ -188,7 +179,6 @@ void child2()
     int fd, val;
     int count = 0;
     pid_t ppid = getppid();
-    STOI in;
     struct sigaction sa;
 
     sa.sa_handler = signalHandlerC;
@@ -213,9 +203,8 @@ void child2()
         exit(EXIT_FAILURE);
     }
 
-    while(read(fd, in.bytes, 4))
+    while(read(fd, &val, 4))
     {
-        val = in.val;
         if(val > 100)
         {
             ++count;
@@ -234,7 +223,6 @@ void child3()
     int fd, val;
     int count = 0;
     pid_t ppid = getppid();
-    STOI in;
     struct sigaction sa;
 
     sa.sa_handler = signalHandlerC;
@@ -259,9 +247,8 @@ void child3()
         exit(EXIT_FAILURE);
     }
 
-    while(read(fd, in.bytes, 4))
+    while(read(fd, &val, 4))
     {
-        val = in.val;
         if(val < 100)
         {
             ++count;

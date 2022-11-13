@@ -1,4 +1,10 @@
-/* Write a threaded program that does the following
+
+/* 
+ *  Author: Alexander Kellough
+ *  NetID: atk133
+ *  Compiler: GCC
+ *
+ * Write a threaded program that does the following
    1. Prompts the user for the number of integers to enter
    2. Prompts the user for each integer and writes them into 
       a file named data.dat
@@ -53,18 +59,6 @@ typedef struct retData
     int ret;
 } retData;
 
-typedef union STOI
-{
-    char bytes[4];
-    int val;
-}STOI;
-
-typedef union ITOS
-{
-    int val;
-    char bytes[4];
-}ITOS;
-
 int predicate = 0;
 pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
@@ -92,7 +86,6 @@ void hndlError(int error, const char *str)
 void * startThread1()
 {
     int tot, val, fd, ret;
-    ITOS out;
 
     pthread_detach(pthread_self());
     printf("How many integers would you like to enter: ");
@@ -106,7 +99,7 @@ void * startThread1()
         pthread_exit(&ret);
     }
 
-    fd = open("data.dat", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
+    fd = open("data.dat", O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
     if(fd == -1)
     {
         perror("open");
@@ -119,8 +112,7 @@ void * startThread1()
         printf("Intiger %d: ", i+1);
         scanf("%d", &val);
         printf("\n");
-        out.val = val;
-        ret = write(fd, out.bytes, 4);
+        ret = write(fd, &val, 4);
         if(ret == -1)
         {
             perror("write");
@@ -152,7 +144,6 @@ void *startThread2(void *arg)
     retData *argval = (retData *) arg;
     int s, fd, val;
     int cnt = 0;
-    STOI in;
    
     s = pthread_mutex_lock(&mtx); 
     if(s == -1)
@@ -185,9 +176,8 @@ void *startThread2(void *arg)
         pthread_exit(&s);
     }
 
-    while(read(fd, in.bytes, 4)) 
+    while(read(fd, &val, 4)) 
     {
-        val = in.val;
         if(val > 100)
             ++cnt;
     }
@@ -203,7 +193,6 @@ void *startThread3(void *arg)
     retData *argval = (retData *) arg;
     int s, fd, val;
     int cnt = 0;
-    STOI in;
    
     s = pthread_mutex_lock(&mtx); 
     if(s == -1)
@@ -236,9 +225,8 @@ void *startThread3(void *arg)
         pthread_exit(&s);
     }
 
-    while(read(fd, in.bytes, 4)) 
+    while(read(fd, &val, 4)) 
     {
-        val = in.val;
         if(val < 100)
             ++cnt;
     }

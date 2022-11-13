@@ -1,0 +1,492 @@
+INFO: Using the 9-input_test.pas file for input
+found |PROGRAM| PROGRAM
+enter <program>
+|  found |INPUT1| IDENTIFIER
+|  found |;| SEMICOLON
+|  found |VAR| BLOCK
+|  enter <block>
+|  |  found |COUNT| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |COUNT| idType: |INTEGER| --
+|  |  found |USER| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |USER| idType: |INTEGER| --
+|  |  found |N| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |N| idType: |INTEGER| --
+|  |  found |BEGIN| BEGIN
+|  |  enter <compound_stmt>
+|  |  |  found |COUNT| STATEMENT
+|  |  |  enter <assignment>
+|  |  |  |  found |COUNT| IDENTIFIER
+|  |  |  |  COUNT
+|  |  |  |  found |:=| ASSIGN
+|  |  |  |  found |0| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |0| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |0| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |0| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |0| INTLIT
+|  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  exit <assignment>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |'Enter an integer, please:'| WRITE
+|  |  |  |  'Enter an integer, please:'
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |READ| STATEMENT
+|  |  |  enter <read>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |USER| IDENTIFIER
+|  |  |  |  USER
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <read>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |N| STATEMENT
+|  |  |  enter <assignment>
+|  |  |  |  found |N| IDENTIFIER
+|  |  |  |  N
+|  |  |  |  found |:=| ASSIGN
+|  |  |  |  found |USER| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |USER| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |USER| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |USER| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |USER| IDENTIFIER
+|  |  |  |  |  |  |  |  USER
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  exit <assignment>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WHILE| STATEMENT
+|  |  |  enter <while>
+|  |  |  |  found |(| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |(| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |(| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |(| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  |  (
+|  |  |  |  |  |  |  |  found |N| EXPRESSION
+|  |  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  |  found |N| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  found |N| TERM
+|  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  found |N| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  found |N| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  |  N
+|  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  found |<>| NOTEQUALTO
+|  |  |  |  |  |  |  |  |  <>
+|  |  |  |  |  |  |  |  |  found |0| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  found |0| TERM
+|  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  found |0| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  found |0| INTLIT
+|  |  |  |  |  |  |  |  |  |  |  |  0
+|  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  |  found |BEGIN| STATEMENT
+|  |  |  |  found |BEGIN| BEGIN
+|  |  |  |  enter <compound_stmt>
+|  |  |  |  |  found |N| STATEMENT
+|  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  found |N| IDENTIFIER
+|  |  |  |  |  |  N
+|  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  found |N| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |N| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |N| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |N| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |N| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  N
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  found |/| DIVIDE
+|  |  |  |  |  |  |  |  |  /
+|  |  |  |  |  |  |  |  |  found |10| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |10| INTLIT
+|  |  |  |  |  |  |  |  |  |  10
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  exit <assignment>
+|  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  found |COUNT| STATEMENT
+|  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  found |COUNT| IDENTIFIER
+|  |  |  |  |  |  COUNT
+|  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  found |COUNT| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |COUNT| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |COUNT| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |COUNT| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |COUNT| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  COUNT
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  found |+| PLUS
+|  |  |  |  |  |  |  |  +
+|  |  |  |  |  |  |  |  found |1| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |1| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |1| INTLIT
+|  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  exit <assignment>
+|  |  |  |  found |END| END
+|  |  |  |  exit <compound_stmt>
+|  |  |  exit <while>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |USER| WRITE
+|  |  |  |  USER
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |'contains'| WRITE
+|  |  |  |  'contains'
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |COUNT| WRITE
+|  |  |  |  COUNT
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |'digits'| WRITE
+|  |  |  |  'digits'
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |' '| WRITE
+|  |  |  |  ' '
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |IF| STATEMENT
+|  |  |  enter <if>
+|  |  |  |  found |NOT| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |NOT| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |NOT| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |NOT| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |NOT| NOT
+|  |  |  |  |  |  |  |  NOT
+|  |  |  |  |  |  |  |  found |(| FACTOR
+|  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  |  |  (
+|  |  |  |  |  |  |  |  |  found |COUNT| EXPRESSION
+|  |  |  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  |  |  found |COUNT| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  |  found |COUNT| TERM
+|  |  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  |  found |COUNT| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  |  found |COUNT| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  |  |  COUNT
+|  |  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  |  found |<| LESSTHAN
+|  |  |  |  |  |  |  |  |  |  <
+|  |  |  |  |  |  |  |  |  |  found |9| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  |  found |9| TERM
+|  |  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  |  found |9| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  |  found |9| INTLIT
+|  |  |  |  |  |  |  |  |  |  |  |  |  9
+|  |  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  |  found |THEN| THEN
+|  |  |  |  found |WRITE| STATEMENT
+|  |  |  |  enter <write>
+|  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  found |'Now, that is a big number!'| WRITE
+|  |  |  |  |  'Now, that is a big number!'
+|  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  exit <write>
+|  |  |  exit <if>
+|  |  found |END| END
+|  |  exit <compound_stmt>
+|  exit <block>
+exit <program>
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+*** Print the Tree ***
+
+(program 
+|  (block 
+|  |  (compound_stmt
+|  |  |  (assignment_stmt ( COUNT := )
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( INTLIT: 0 ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  assignment_stmt)
+|  |  |  (write_stmt ( 'Enter an integer, please:' )
+|  |  |  write_stmt)
+|  |  |  (read_stmt ( USER )
+|  |  |  read_stmt)
+|  |  |  (assignment_stmt ( N := )
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( IDENT: USER ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  assignment_stmt)
+|  |  |  (while_stmt 
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( 
+|  |  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  (factor ( IDENT: N ) 
+|  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  <> 
+|  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  (factor ( INTLIT: 0 ) 
+|  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  expression) )
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  |  (compound_stmt
+|  |  |  |  |  (assignment_stmt ( N := )
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( IDENT: N ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  / 
+|  |  |  |  |  |  |  |  |  (factor ( INTLIT: 10 ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  assignment_stmt)
+|  |  |  |  |  (assignment_stmt ( COUNT := )
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( IDENT: COUNT ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  + 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( INTLIT: 1 ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  assignment_stmt)
+|  |  |  |  compound_stmt)
+|  |  |  while_stmt)
+|  |  |  (write_stmt ( USER )
+|  |  |  write_stmt)
+|  |  |  (write_stmt ( 'contains' )
+|  |  |  write_stmt)
+|  |  |  (write_stmt ( COUNT )
+|  |  |  write_stmt)
+|  |  |  (write_stmt ( 'digits' )
+|  |  |  write_stmt)
+|  |  |  (write_stmt ( ' ' )
+|  |  |  write_stmt)
+|  |  |  (if_stmt 
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor (NOT 
+|  |  |  |  |  |  |  |  (factor ( 
+|  |  |  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  |  (factor ( IDENT: COUNT ) 
+|  |  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  |  < 
+|  |  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  |  (factor ( INTLIT: 9 ) 
+|  |  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  |  expression) )
+|  |  |  |  |  |  |  |  factor) ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  (then 
+|  |  |  |  (write_stmt ( 'Now, that is a big number!' )
+|  |  |  |  write_stmt)
+|  |  |  then) 
+|  |  |  if_stmt)
+|  |  compound_stmt)
+|  block) 
+program) 
+
+
+*** User Defined Symbols ***
+COUNT
+N
+USER
+
+*** Delete the Tree ***
+Deleting ProgramNode
+Deleting BlockNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:ReadStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting StatementNode:WhileStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:NestedExprNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:IfStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:NotNode
+Deleting FactorNode:NestedExprNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:WriteStmtNode

@@ -1,0 +1,506 @@
+INFO: Using the 11-divisors.pas file for input
+found |PROGRAM| PROGRAM
+enter <program>
+|  found |DIVISORS| IDENTIFIER
+|  found |;| SEMICOLON
+|  found |VAR| BLOCK
+|  enter <block>
+|  |  found |I| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |I| idType: |INTEGER| --
+|  |  found |N| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |N| idType: |INTEGER| --
+|  |  found |MODULA| IDENTIFIER
+|  |  found |:| COLON
+|  |  found |INTEGER| TYPE
+|  |  found |;| SEMICOLON
+|  |  -- idName: |MODULA| idType: |INTEGER| --
+|  |  found |BEGIN| BEGIN
+|  |  enter <compound_stmt>
+|  |  |  found |I| STATEMENT
+|  |  |  enter <assignment>
+|  |  |  |  found |I| IDENTIFIER
+|  |  |  |  I
+|  |  |  |  found |:=| ASSIGN
+|  |  |  |  found |1| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |1| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |1| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |1| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |1| INTLIT
+|  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  exit <assignment>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |'The divisors of 100 are:'| WRITE
+|  |  |  |  'The divisors of 100 are:'
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WHILE| STATEMENT
+|  |  |  enter <while>
+|  |  |  |  found |(| EXPRESSION
+|  |  |  |  enter <expression>
+|  |  |  |  |  found |(| SIMPLE_EXP
+|  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  found |(| TERM
+|  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  found |(| FACTOR
+|  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  |  (
+|  |  |  |  |  |  |  |  found |I| EXPRESSION
+|  |  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  |  found |I| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  found |I| TERM
+|  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  found |I| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  found |I| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  |  I
+|  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  found |<| LESSTHAN
+|  |  |  |  |  |  |  |  |  <
+|  |  |  |  |  |  |  |  |  found |101| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  found |101| TERM
+|  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  found |101| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  found |101| INTLIT
+|  |  |  |  |  |  |  |  |  |  |  |  101
+|  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  exit <term>
+|  |  |  |  |  exit <simple_exp>
+|  |  |  |  exit <expression>
+|  |  |  |  found |BEGIN| STATEMENT
+|  |  |  |  found |BEGIN| BEGIN
+|  |  |  |  enter <compound_stmt>
+|  |  |  |  |  found |MODULA| STATEMENT
+|  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  found |MODULA| IDENTIFIER
+|  |  |  |  |  |  MODULA
+|  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  found |100| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |100| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |100| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |100| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |100| INTLIT
+|  |  |  |  |  |  |  |  |  |  100
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  exit <assignment>
+|  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  found |WHILE| STATEMENT
+|  |  |  |  |  enter <while>
+|  |  |  |  |  |  found |(| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |(| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |(| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |(| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  |  |  |  (
+|  |  |  |  |  |  |  |  |  |  found |MODULA| EXPRESSION
+|  |  |  |  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  |  |  |  found |MODULA| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  |  |  found |MODULA| TERM
+|  |  |  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  |  |  found |MODULA| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  found |MODULA| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  MODULA
+|  |  |  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  |  |  found |>| GREATERTHAN
+|  |  |  |  |  |  |  |  |  |  |  >
+|  |  |  |  |  |  |  |  |  |  |  found |I| SIMPLE_EXP
+|  |  |  |  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  |  |  |  found |I| TERM
+|  |  |  |  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  |  |  |  found |I| FACTOR
+|  |  |  |  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  found |I| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  I
+|  |  |  |  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  found |MODULA| STATEMENT
+|  |  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  |  found |MODULA| IDENTIFIER
+|  |  |  |  |  |  |  MODULA
+|  |  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  |  found |MODULA| EXPRESSION
+|  |  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  |  found |MODULA| SIMPLE_EXP
+|  |  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  |  found |MODULA| TERM
+|  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  found |MODULA| FACTOR
+|  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  found |MODULA| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  MODULA
+|  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  |  found |-| MINUS
+|  |  |  |  |  |  |  |  |  -
+|  |  |  |  |  |  |  |  |  found |I| TERM
+|  |  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  |  found |I| FACTOR
+|  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  found |I| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  I
+|  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  exit <assignment>
+|  |  |  |  |  exit <while>
+|  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  found |IF| STATEMENT
+|  |  |  |  |  enter <if>
+|  |  |  |  |  |  found |-| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |-| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |-| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |-| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |-| MINUS
+|  |  |  |  |  |  |  |  |  |  -
+|  |  |  |  |  |  |  |  |  |  found |MODULA| FACTOR
+|  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  found |MODULA| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  MODULA
+|  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  |  found |=| EQUALTO
+|  |  |  |  |  |  |  =
+|  |  |  |  |  |  |  found |-| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |-| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |-| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |-| MINUS
+|  |  |  |  |  |  |  |  |  |  -
+|  |  |  |  |  |  |  |  |  |  found |I| FACTOR
+|  |  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  |  found |I| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  |  I
+|  |  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  |  found |THEN| THEN
+|  |  |  |  |  |  found |WRITE| STATEMENT
+|  |  |  |  |  |  enter <write>
+|  |  |  |  |  |  |  found |(| OPENPAREN
+|  |  |  |  |  |  |  found |I| WRITE
+|  |  |  |  |  |  |  I
+|  |  |  |  |  |  |  found |)| CLOSEPAREN
+|  |  |  |  |  |  exit <write>
+|  |  |  |  |  exit <if>
+|  |  |  |  |  found |;| SEMICOLON
+|  |  |  |  |  found |I| STATEMENT
+|  |  |  |  |  enter <assignment>
+|  |  |  |  |  |  found |I| IDENTIFIER
+|  |  |  |  |  |  I
+|  |  |  |  |  |  found |:=| ASSIGN
+|  |  |  |  |  |  found |I| EXPRESSION
+|  |  |  |  |  |  enter <expression>
+|  |  |  |  |  |  |  found |I| SIMPLE_EXP
+|  |  |  |  |  |  |  enter <simple_exp>
+|  |  |  |  |  |  |  |  found |I| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |I| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |I| IDENTIFIER
+|  |  |  |  |  |  |  |  |  |  I
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  |  found |+| PLUS
+|  |  |  |  |  |  |  |  +
+|  |  |  |  |  |  |  |  found |1| TERM
+|  |  |  |  |  |  |  |  enter <term>
+|  |  |  |  |  |  |  |  |  found |1| FACTOR
+|  |  |  |  |  |  |  |  |  enter <factor>
+|  |  |  |  |  |  |  |  |  |  found |1| INTLIT
+|  |  |  |  |  |  |  |  |  |  1
+|  |  |  |  |  |  |  |  |  exit <factor>
+|  |  |  |  |  |  |  |  exit <term>
+|  |  |  |  |  |  |  exit <simple_exp>
+|  |  |  |  |  |  exit <expression>
+|  |  |  |  |  exit <assignment>
+|  |  |  |  found |END| END
+|  |  |  |  exit <compound_stmt>
+|  |  |  exit <while>
+|  |  |  found |;| SEMICOLON
+|  |  |  found |WRITE| STATEMENT
+|  |  |  enter <write>
+|  |  |  |  found |(| OPENPAREN
+|  |  |  |  found |'--- Sir, your divisors are ready ---'| WRITE
+|  |  |  |  '--- Sir, your divisors are ready ---'
+|  |  |  |  found |)| CLOSEPAREN
+|  |  |  exit <write>
+|  |  found |END| END
+|  |  exit <compound_stmt>
+|  exit <block>
+exit <program>
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+*** Print the Tree ***
+
+(program 
+|  (block 
+|  |  (compound_stmt
+|  |  |  (assignment_stmt ( I := )
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( INTLIT: 1 ) 
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  assignment_stmt)
+|  |  |  (write_stmt ( 'The divisors of 100 are:' )
+|  |  |  write_stmt)
+|  |  |  (while_stmt 
+|  |  |  |  (expression 
+|  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  (factor ( 
+|  |  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  (factor ( IDENT: I ) 
+|  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  < 
+|  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  (factor ( INTLIT: 101 ) 
+|  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  expression) )
+|  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  term) 
+|  |  |  |  |  simple_exp) 
+|  |  |  |  expression) 
+|  |  |  |  (compound_stmt
+|  |  |  |  |  (assignment_stmt ( MODULA := )
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( INTLIT: 100 ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  assignment_stmt)
+|  |  |  |  |  (while_stmt 
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( 
+|  |  |  |  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (factor ( IDENT: MODULA ) 
+|  |  |  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  |  |  > 
+|  |  |  |  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  |  |  |  (factor ( IDENT: I ) 
+|  |  |  |  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  |  |  |  expression) )
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  |  (assignment_stmt ( MODULA := )
+|  |  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  (factor ( IDENT: MODULA ) 
+|  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  - 
+|  |  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  |  (factor ( IDENT: I ) 
+|  |  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  |  expression) 
+|  |  |  |  |  |  assignment_stmt)
+|  |  |  |  |  while_stmt)
+|  |  |  |  |  (if_stmt 
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor (- 
+|  |  |  |  |  |  |  |  |  |  (factor ( IDENT: MODULA ) 
+|  |  |  |  |  |  |  |  |  |  factor) ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  = 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor (- 
+|  |  |  |  |  |  |  |  |  |  (factor ( IDENT: I ) 
+|  |  |  |  |  |  |  |  |  |  factor) ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  (then 
+|  |  |  |  |  |  (write_stmt ( I )
+|  |  |  |  |  |  write_stmt)
+|  |  |  |  |  then) 
+|  |  |  |  |  if_stmt)
+|  |  |  |  |  (assignment_stmt ( I := )
+|  |  |  |  |  |  (expression 
+|  |  |  |  |  |  |  (simple_exp 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( IDENT: I ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  + 
+|  |  |  |  |  |  |  |  (term 
+|  |  |  |  |  |  |  |  |  (factor ( INTLIT: 1 ) 
+|  |  |  |  |  |  |  |  |  factor) 
+|  |  |  |  |  |  |  |  term) 
+|  |  |  |  |  |  |  simple_exp) 
+|  |  |  |  |  |  expression) 
+|  |  |  |  |  assignment_stmt)
+|  |  |  |  compound_stmt)
+|  |  |  while_stmt)
+|  |  |  (write_stmt ( '--- Sir, your divisors are ready ---' )
+|  |  |  write_stmt)
+|  |  compound_stmt)
+|  block) 
+program) 
+
+
+*** User Defined Symbols ***
+I
+MODULA
+N
+
+*** Delete the Tree ***
+Deleting ProgramNode
+Deleting BlockNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:WhileStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:NestedExprNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:CompoundStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:WhileStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:NestedExprNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting StatementNode:IfStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:MinusNode
+Deleting FactorNode:IdNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:MinusNode
+Deleting FactorNode:IdNode
+Deleting StatementNode:WriteStmtNode
+Deleting StatementNode:AssignmentStmtNode
+Deleting ExpressionNode
+Deleting SimpleExpNode
+Deleting TermNode
+Deleting FactorNode:IdNode
+Deleting TermNode
+Deleting FactorNode:IntLitNode
+Deleting StatementNode:WriteStmtNode

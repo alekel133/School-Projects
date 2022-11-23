@@ -80,7 +80,7 @@ int main(int argc, char* argv[])
   //     cat front.in | parse.exe -p -d
 
   // Create the root of the parse tree
-  ExprNode* root = nullptr;
+    ProgramNode* root = nullptr;
 
   lex();  // prime the pump (get first token)
   do {

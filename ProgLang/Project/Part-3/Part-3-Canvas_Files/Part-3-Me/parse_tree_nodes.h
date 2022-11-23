@@ -2,7 +2,7 @@
 Author: Alexander Kellough       NetID:atk133
 Title: Project Part 3 
 Purpose:
-   Class and Function Definitions for Parse Tree Generation
+   Class and Function Declerations for Parse Tree Generation
  ********************************************************************************/
 
 #ifndef PARSE_TREE_NODES_H
@@ -17,13 +17,102 @@ using namespace std;
 
 extern bool printDelete;
 
-class PrgoramNode;
-class BlockkNode;
+class ProgramNode;
+class BlockNode;
 class StatementNode;
+class CompoundNode;
 class ExprNode;
 class SimpleExprNode;
 class TermNode;
 class FactorNode;
+
+class ProgramNode {
+public:
+    int _level;
+    BlockNode* block = nullptr;
+
+    ProgramNode(int level, BlockNode* value);
+    ~ProgramNode();
+};
+ostream& operator << (ostream&, ProgramNode&);
+
+class BlockNode {
+public:
+    int _level;
+    CompoundNode* cmpd = nullptr;
+
+    BlockNode(int level, CompoundNode* value);
+    ~BlockNode();
+};
+ostream& operator<<(ostream&, BlockNode&);
+
+class StatementNode {
+public:
+    int _level = 0;
+
+    virtual void printTo(ostream &os) = 0;
+    virtual ~StatementNode();
+};
+ostream& operator<<(ostream&, StatementNode&);
+
+class AssignmentNode : public StatementNode { 
+public:
+    string* ident = nullptr;
+    ExprNode* exp = nullptr;
+
+    AssignmentNode(int level);
+    ~AssignmentNode();
+    void printTo(ostream &os);
+};
+
+class CompoundNode : public StatementNode {
+public:
+    vector<StatementNode*> statementList;
+
+    CompoundNode(int level);
+    ~CompoundNode();
+    void printTo(ostream &os);
+};
+
+class IfNode : public StatementNode {
+public:
+    bool elf = false;
+    ExprNode* ifExpression = nullptr;
+    StatementNode* thenStatement = nullptr;
+    StatementNode* elseStatement = nullptr;
+
+    IfNode(int level);
+    ~IfNode();
+    void printTo(ostream &os);
+};
+
+class WhileNode : public StatementNode {
+public:
+    ExprNode* cond = nullptr;
+    StatementNode* result = nullptr;
+
+    WhileNode(int level);
+    ~WhileNode();
+    void printTo(ostream &os);
+};
+
+class ReadNode : public StatementNode {
+public:
+    string* ident = nullptr;
+
+    ReadNode(int level, string* value);
+    ~ReadNode();
+    void printTo(ostream &os);
+};
+
+class WriteNode : public StatementNode {
+public:
+    string* _value = nullptr;
+
+    WriteNode(int level, string* value);
+    ~WriteNode();
+    void printTo(ostream &os);
+};
 
 class ExprNode {
 public:

@@ -2,7 +2,7 @@
  
 Name: Alexander Kellough            NetID: atk133
 
-Program: Class-Project-Part-2       Class: CSE 4714
+Program: Class-Project-Part-3       Class: CSE 4714
 
 Description:
     Header file declaring useful parsing constants and functions.
@@ -15,6 +15,8 @@ Description:
 #include <string>
 #include <vector>
 #include <iostream>
+#include "lexer.h"
+#include "parse_tree_nodes.h"
 
 using namespace std;
 
@@ -30,6 +32,7 @@ extern "C" {
 }
 
 // Function declarations
-void program();
+ProgramNode* program();
+
 
 #endif /* PARSER_H */

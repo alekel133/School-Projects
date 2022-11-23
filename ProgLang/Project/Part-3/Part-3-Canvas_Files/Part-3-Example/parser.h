@@ -25,8 +25,6 @@ extern bool printParse;      // shall tree be printed while parsing?
 /* Function declarations */
 int lex();                   // return the next token
 
-ExprNode* expr();
-TermNode* term();
-FactorNode* factor();
+ProgramNode *program();
 
 #endif /* PARSER_H */

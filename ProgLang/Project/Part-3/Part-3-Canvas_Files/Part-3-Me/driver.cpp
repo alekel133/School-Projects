@@ -1,5 +1,5 @@
 //*****************************************************************************
-// purpose: Driver for Project Part 2 (parser for TIPS)
+// purpose: Driver for Project Part 3 (parser for TIPS)
 // version: Fall 2022
 //*****************************************************************************
 #ifdef _MSC_VER
@@ -12,6 +12,7 @@
 #include "parser.h"
 #include <vector>
 #include <bits/stdc++.h>
+#include "parse_tree_nodes.h"
 
 using namespace std;
 
@@ -54,10 +55,12 @@ int main(int argc, char* argv[]) {
     // Get the first token
     nextToken = yylex();
 
+    ProgramNode* root;
+
     // Fire up the parser!
     try {
         // Process the expected production
-        program();  
+        root = program();  
         //factor(); // Build bottom-up to <expression>
 
         if (nextToken != TOK_EOF)
@@ -72,15 +75,23 @@ int main(int argc, char* argv[]) {
 
     // Tell the world about our success!!
     cout << endl << "=== GO BULLDOGS! Your parse was successful! ===" << endl;
-  
+
+    // Print the Tree
+    cout << endl << "*** Print the Tree ***" << endl << endl;
+    cout << *root; 
 
     // Print out the symbol table
     sort(ids.begin(), ids.end());
-    cout << endl << "User Defined Symbols:" << endl;
+    cout << endl << endl << "*** User Defined Symbols ***" << endl;
     vector<string>::iterator it;
     for (it = ids.begin(); it != ids.end(); ++it) {
         cout << *it << endl;
     }
+
+    // Delete the tree
+    cout << endl << "*** Delete the Tree ***" << endl;
+    delete root;
+    root = nullptr;
 
     return EXIT_SUCCESS;
 }

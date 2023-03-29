@@ -1,0 +1,7 @@
+;s
+ls
+ls
+ls < cat audit.log
+ls > cat audit.log
+history
+flush

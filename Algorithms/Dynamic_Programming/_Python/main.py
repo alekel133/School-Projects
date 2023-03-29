@@ -145,7 +145,7 @@ def main():
             c_vals.append(C(n,k))
             end = float(time.time())
             stop = end-start
-            if(stop > 1):
+            if(stop > 60):
                 switch = True
 
             c_time.append(stop)

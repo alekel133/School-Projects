@@ -1,9 +1,17 @@
+/*
+   Author: Alexander Kellough
+   NetID: atk133
+   
+Description:
+   Small program for emulating wc -l command using pthread.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
 #include <pthread.h>
 
+// Global Line Counter
 int numLines = 0;
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
@@ -56,24 +64,30 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
+    // Sets up thread object & return variable vectors size = len(argv-1) = num_files
     threads = (pthread_t *) malloc((threadCount) * sizeof(pthread_t));
     rec = (int *) malloc((threadCount) * sizeof(int));
     
     for(int i = 0; i < threadCount; ++i)
     {
+        // Create threads and report errors
         if( (rec[i] = pthread_create(&threads[i], NULL, countLines, argv[i+1])) ) 
         {
-
-            perror("Error in thread creation: ");
+            perror("Error in pthread_create ");
             exit(EXIT_FAILURE);
         }
     }
 
     for(int i = 0; i < threadCount; ++i)
     {
-        pthread_join(threads[i], NULL);
+        if(pthread_join(threads[i], NULL))
+        {
+          perror("Erro in pthread_join");
+          exit(EXIT_FAILURE);
+        }
     }
 
+    // print number of lines and exit
     fprintf(stdout, "%d\n", numLines);
     exit(EXIT_SUCCESS);
 }

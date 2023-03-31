@@ -18,6 +18,7 @@ pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 // Update numLines
 void updateCount(int newLines)
 {
+    // Lock mutex -> append line_count-> Unlock Mutex
     pthread_mutex_lock(&lock);
     numLines += newLines;
     pthread_mutex_unlock(&lock);
@@ -29,6 +30,8 @@ void *countLines(void *filename)
     int count;
     char buf;
     FILE* file;
+    
+    // Attempt to open file, and exit if error
     file = fopen((char *) filename, "r");
     if(file == NULL)
     {
@@ -37,6 +40,7 @@ void *countLines(void *filename)
     }
     while(1)
     {
+        // Loop until end of file counting newlines
         if(feof(file))
         {
             break;
@@ -47,6 +51,8 @@ void *countLines(void *filename)
         if(buf == '\n')
             ++count; 
     }
+
+    // Race Condition
     updateCount(count);
     return NULL;
 }
@@ -80,6 +86,7 @@ int main(int argc, char *argv[])
 
     for(int i = 0; i < threadCount; ++i)
     {
+        // Roert errors in joining of threads
         if(pthread_join(threads[i], NULL))
         {
           perror("Erro in pthread_join");

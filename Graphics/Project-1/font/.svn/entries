@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="281"
+   name=""
+   committed-date="2007-08-27T20:04:37.758418Z"
+   url="svn+ssh://vis.cse.msstate.edu/repository/tjk/teaching/cse4413/Fall%202007/src/a1/font"
+   last-author="tjk"
+   kind="dir"
+   uuid="0bc8278f-d2fc-0310-a42a-f1720328a860"
+   revision="281"/>
+<entry
+   committed-rev="280"
+   name="M.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="206752421f90961ac9df03db0a8d93de"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="N.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="772acb955305648a11f3c943c79b6864"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="O.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="ea85fa44821a4535aae578a900174f1d"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="P.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="8f179d98205a9f5304b63837ff8187e0"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="Q.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="83eeba042f397043d336d7bc573b76c5"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="R.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="9822d72e5feeec7e7d68e3e4dbf1248d"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="S.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="d77e6b6ae658f4d4220e769b0cf09e2f"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="T.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="de65d953d688a1d97513a4e9d76b38eb"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="U.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="ef515960d28d0f374acb0bdd977ef529"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="V.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="ea5443301d259800be0c9a3197f81287"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="W.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="b7fc8a9d950e35afbd5ce3a3185326cb"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="X.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="14877bd008c3052adfecfd96134f9683"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="281"
+   name="bang.png"
+   text-time="2007-08-27T20:03:02.000000Z"
+   committed-date="2007-08-27T20:04:37.758418Z"
+   checksum="a5d7cebb4ad2e511d1df1a039cf82ddb"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T20:03:02.000000Z"/>
+<entry
+   committed-rev="280"
+   name="Y.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="b79daef7a39882de1f6a2b58a7d330e7"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="Z.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="0ade5c2c3570190d9c22cb790c57eba3"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="281"
+   name="dot.png"
+   text-time="2007-08-27T20:03:02.000000Z"
+   committed-date="2007-08-27T20:04:37.758418Z"
+   checksum="aa76c29bbc117355ee932759bdeb57b9"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T20:03:02.000000Z"/>
+<entry
+   committed-rev="280"
+   name="0.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="3aaccb6402d7dceb513e80054003ddb8"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="1.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="f343c2a7e9ffe6ea55f8fd4331384d21"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="2.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="8b795b4c49803a56c98f7507710a6e61"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="281"
+   name="quest.png"
+   text-time="2007-08-27T20:03:02.000000Z"
+   committed-date="2007-08-27T20:04:37.758418Z"
+   checksum="2d0c0bdaec20782f6c45b073c3776d93"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T20:03:02.000000Z"/>
+<entry
+   committed-rev="280"
+   name="3.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="bacf41483fd34e47c87cd99684eb6e8a"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="4.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="118177de3536e55ecd40a9e00af5560d"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="5.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="74be0fbc6ce398154df181fa875ce08e"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="6.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="25617fac8f6df190ae5b90947c7bacf4"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="7.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="2ce628b6d19e365a65929892f40bad19"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="8.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="11635b7b6649357fd85f24b3fbb6039b"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="9.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="573d186f3b5c7ef0b1d8d6093987ad04"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="A.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="55a4b465779e1a7584a5c3730a712d36"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="B.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="535f344aaade976313e8ef1a0cf31bed"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="C.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="2c3cad5e8a2794c903fd3aed33f0b576"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="D.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="bc5b0ed839279d4ed4f1c71a64228a80"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="E.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="277f8308e612c754962281a5ef2bc6fe"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="F.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="5fccadb6c78f91519e0f4d18830fbe2a"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="G.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="89649231f9c17be30d2a1919b645c228"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="H.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="45ead4917346323dc06a569e14754ab2"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="I.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="15233567c591b117f6371d01bc1fda39"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="J.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="aa7b392e1a4e3993270558c27c861dd2"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="K.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="02015536284e7afa60848d4bc2db0ace"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+<entry
+   committed-rev="280"
+   name="L.png"
+   text-time="2007-08-23T16:47:15.000000Z"
+   committed-date="2007-08-27T20:00:09.246849Z"
+   checksum="1da6fb9c9e13038d59c24cef7913ae5e"
+   last-author="tjk"
+   kind="file"
+   prop-time="2007-08-27T19:57:38.000000Z"/>
+</wc-entries>

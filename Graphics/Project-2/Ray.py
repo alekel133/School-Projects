@@ -23,7 +23,7 @@ class Ray:
 
 def generateRay(camera: Camera, height, width, i, j):
     pc = numpy.multiply(camera.viewDistance, camera.view)
-    ihat = numpy.cross(camera.up, -camera.view)
+    ihat = numpy.cross(camera.up, camera.view)
     jhat = camera.up
     
     pi = ((i+0.5)/width) - 0.5
@@ -34,7 +34,5 @@ def generateRay(camera: Camera, height, width, i, j):
 
     pij = pc + numpy.multiply(pi, ihat) + numpy.multiply(pj, jhat)
 
-    direction  = (pij - camera.position)
-
-    return Ray(camera.position, direction)
+    return Ray(camera.position, pij)
 

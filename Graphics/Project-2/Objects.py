@@ -22,7 +22,7 @@ class Sphere(Object):
         # Adopted from code by Dr. Jankun-Kelly provided on canvas: "Basic Ray Casting"
         # Because direction gets normalized on initilization, a is eliminated
         b = numpy.dot(ray.direction, ray.origin - self.center)
-        c = numpy.linalg.norm(ray.origin - self.center)**2 - self.radius**2
+        c = numpy.linalg.norm(ray.origin - self.center)- self.radius**2
         disc = (b**2)-4*c
 
         # If the discreminant is negative, we get imaginary roots, 
@@ -32,9 +32,18 @@ class Sphere(Object):
         
         t1 = -b + numpy.sqrt(disc)
         t0 = -b - numpy.sqrt(disc)
+
         if(t0 > 0 and t1 > 0):
-            return min(t0, t1)
-        return (True, (t0, self.color))
+            return (True, (min(t0, t1), self.color))
+
+        elif t1 > 0:
+            return (True, (t1, self.color))
+
+        elif t0 > 0:
+            return (True, (t0, self.color))
+
+        return(False, None)
+
 
 class Plane(Object):
     def __init__(self, origin:numpy.array, normal: numpy.array, color: tuple):
@@ -63,7 +72,7 @@ class Plane(Object):
         if bottom == 0:
             return (False, None)
 
-        t = numpy.subtract(pEq,numpy.dot(self.normal, ray.origin)) / bottom
+        t = pEq -numpy.dot(self.normal, ray.origin) / bottom
         if(t < 0):
             return (False, None)
 

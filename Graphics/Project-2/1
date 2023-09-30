@@ -1,15 +1,18 @@
 import numpy
 
 class Camera:
-    def __init__(self, position:numpy.array, up:numpy.array, viewpoint: numpy.array, viewDistance: float):
+    def __init__(self, position:numpy.array, up:numpy.array, view: numpy.array, viewDistance: float):
         self.position = position
-        self.view = viewpoint - position
-        self.view = self.view / numpy.linalg.norm(self.view)
-        self.up = up
+        self.view = view/numpy.linalg.norm(view)
+
+        self.up = numpy.random.randn3()
+        self.up -= self.up.dot(self.view) * self.view
+        self.up = self.up / numpy.linalg.norm(self.up)
+
         self.viewDistance = viewDistance
 
     def __str__(self):
-        return f'Camera: position={self.position}, view={self.view}, self.up= {self.up}, view distance= {self.viewDistance}'
+        return f'Camera: position={self.position}, view={self.view}, self.up ,view distance= {self.viewDistance}'
 
 class Ray:
     def __init__(self, origin, direction:numpy.array):
@@ -22,13 +25,13 @@ class Ray:
     def __str__(self):
         return f'Ray: origin={self.origin}, direction={self.direction}'
 
-def generateRay(camera: Camera, height, width, i, j, vr, hr):
+def generateRay(camera: Camera, height, width, i, j):
     pc = numpy.multiply(camera.viewDistance, camera.view)
     ihat = numpy.cross(camera.up, -camera.view)
     jhat = camera.up
-
-    pi = ((i+0.5)/hr) - 0.5
-    pj = ((j+0.5)/vr) - 0.5
+    
+    pi = ((i+0.5)/width) - 0.5
+    pj = ((j+0.5)/height) - 0.5
 
     ihat = numpy.multiply(ihat, width)
     jhat = numpy.multiply(jhat, height)

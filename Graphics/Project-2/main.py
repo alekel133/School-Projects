@@ -61,15 +61,15 @@ def parseFile(filename, height, width):
             eye = numpy.array((float(val[1]), float(val[2]), float(val[3])))
             line = file.readline()
             val = line.split()
-            if val[0] != "cu":
-                exit("Error: No camera up vector provided.")
-
+            if(val[0] != "cu"):
+                exit("Error: No camera up direction given")
+            
             up = numpy.array((float(val[1]), float(val[2]), float(val[3])))
+
             line = file.readline()
             val = line.split()
-            if(val[0] != "cv"):
-                exit("Error: No camera viewing direction given")
-
+            if val[0] != "vp":
+                exit("Error: No viewpoint give.")
             view = numpy.array((float(val[1]), float(val[2]), float(val[3])))
 
             line = file.readline()
@@ -78,7 +78,7 @@ def parseFile(filename, height, width):
                 exit("Error: No view distance(aperture) given.")
             
             vd = float(val[1])
-            camera = Ray.Camera(eye, up, view, vd)
+            camera = Ray.Camera(eye,up, view, vd)
 
         elif not line:
             break
@@ -120,7 +120,7 @@ def main():
         for j in range(height):
             hit = list()
             vis = tuple()
-            ray = Ray.generateRay(camera, height, width, i, j)
+            ray = Ray.generateRay(camera, 10, 10, i, j,width, height)
             for obj in objects:
                 intersect = obj.isHit(ray)
                 if(intersect[0] == True):
@@ -128,9 +128,10 @@ def main():
 
             if(len(hit) != 0):
                 vis = min(hit, key=minKey)
-                outImage.putpixel((i,j), vis[1]) 
+                outImage.putpixel((i,j), vis[1])
 
     outImage.show()
     outImage.save(outname, format="PNG")
     outImage.close()
+
 main()

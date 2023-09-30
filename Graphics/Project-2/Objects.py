@@ -33,17 +33,14 @@ class Sphere(Object):
         t1 = -b + numpy.sqrt(disc)
         t0 = -b - numpy.sqrt(disc)
 
-        if(t0 > 0 and t1 > 0):
-            return (True, (min(t0, t1), self.color))
-
-        elif t1 > 0:
+        if(t1 < 0):
+            return (False, None)
+        if(t0 < 0):
             return (True, (t1, self.color))
-
-        elif t0 > 0:
-            return (True, (t0, self.color))
-
-        return(False, None)
-
+        if(t1 != t0):
+            return (True, (min(t1, t0), self.color))
+        
+        return(True, (t0, self.color))
 
 class Plane(Object):
     def __init__(self, origin:numpy.array, normal: numpy.array, color: tuple):

@@ -1,7 +1,7 @@
 #Vertices and face definitions (face normal vectors are calculated from vertices).
 cp -10 0 0
 cu 0 1 0
-cv 1 0 0
+vp 1 0 0
 vd 1
 v 2 1 1
 v 1 2 1

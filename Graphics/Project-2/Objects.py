@@ -21,8 +21,8 @@ class Sphere(Object):
 
         # Adopted from code by Dr. Jankun-Kelly provided on canvas: "Basic Ray Casting"
         # Because direction gets normalized on initilization, a is eliminated
-        b = numpy.dot(ray.direction, ray.origin - self.center)
-        c = numpy.linalg.norm(ray.origin - self.center)- self.radius**2
+        b = numpy.dot(2*ray.direction, ray.origin - self.center)
+        c = numpy.linalg.norm(ray.origin - self.center)**2 - self.radius**2
         disc = (b**2)-4*c
 
         # If the discreminant is negative, we get imaginary roots, 
@@ -64,12 +64,12 @@ class Plane(Object):
         # So return true, the color to be written at that pixel
         # and the t value for further computation (testing for Triangles)
 
-        pEq = numpy.dot(self.normal, self.origin)
         bottom = numpy.dot(self.normal, ray.direction)
         if bottom == 0:
             return (False, None)
 
-        t = pEq -numpy.dot(self.normal, ray.origin) / bottom
+        intersect = self.origin - ray.origin
+        t = numpy.dot(intersect, self.normal) / bottom
         if(t < 0):
             return (False, None)
 
@@ -98,7 +98,7 @@ class Triangle(Object):
         return f'Triangle: p1={self.a}, p2={self.b}, p3={self.c}, normal={self.normal}, color={self.color}'
 
     def isHit(self, ray:Ray):
-        p = Plane(self.normal, self.a, 0)
+        p = Plane(self.a, self.normal, 0)
 
         status = p.isHit(ray)
 
@@ -112,9 +112,9 @@ class Triangle(Object):
         
         intersection = numpy.subtract(ray.origin, numpy.multiply(ret[0], ray.direction))
 
-        ab = numpy.cross(numpy.subtract(self.b,self.a), numpy.subtract(intersection, self.a))
-        bc = numpy.cross(numpy.subtract(self.c,self.b), numpy.subtract(intersection, self.b))
-        ca = numpy.cross(numpy.subtract(self.a,self.c), numpy.subtract(intersection, self.c))
+        ab = numpy.cross(self.b - self.a, intersection - self.a)
+        bc = numpy.cross(self.c - self.b, intersection - self.b)
+        ca = numpy.cross(self.a - self.c, intersection - self.c)
 
         if numpy.dot(ab, self.normal) < 0:
             return (False, None)

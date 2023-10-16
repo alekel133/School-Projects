@@ -16,6 +16,7 @@ def parseFile(filename, height, width):
     objects = list()
     vertices = list()
     camera = None
+    im = None
 
     while True:
         line = file.readline()
@@ -32,6 +33,10 @@ def parseFile(filename, height, width):
 
         elif val[0] == "v":
             vertices.append(numpy.array((float(val[1]),float(val[2]),float(val[3]))))
+
+        elif val[0] == "im":
+           im = (int(val[1]), int(val[2])) 
+
 
         elif val[0] == "f":
             objects.append(Objects.Triangle((vertices[int(val[1])-1], vertices[int(val[2])-1], vertices[int(val[3])-1]),
@@ -86,7 +91,7 @@ def parseFile(filename, height, width):
     if camera == None:
         exit("Error: No camera data provided.")
 
-    return (camera, objects)
+    return (camera, objects, im)
     
 def minKey(tup):
     return tup[0]
@@ -106,6 +111,7 @@ def main():
 
     camera = stat[0]
     objects = stat[1]
+    im = stat[2]
     print(camera)
     for obj in objects: 
         print(obj)
@@ -120,7 +126,7 @@ def main():
         for j in range(height):
             hit = list()
             vis = tuple()
-            ray = Ray.generateRay(camera, 10, 10, i, j,width, height)
+            ray = Ray.generateRay(camera, im[0], im[1], i, j,height, width)
             for obj in objects:
                 intersect = obj.isHit(ray)
                 if(intersect[0] == True):

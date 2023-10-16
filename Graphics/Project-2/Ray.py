@@ -27,11 +27,11 @@ def generateRay(camera: Camera, height, width, i, j, vr, hr):
     ihat = numpy.cross(camera.up, -camera.view)
     jhat = camera.up
 
-    pi = ((i+0.5)/hr) - 0.5
-    pj = ((j+0.5)/vr) - 0.5
+    pi = ((i+0.5*vr/hr)/hr) - 0.5 
+    pj = ((j+0.5*hr/vr)/vr) - 0.5
 
-    ihat = numpy.multiply(ihat, width)
-    jhat = numpy.multiply(jhat, height)
+    ihat = numpy.multiply(ihat, width) * width/height
+    jhat = numpy.multiply(jhat, height) * height/width
 
     pij = pc + numpy.multiply(pi, ihat) + numpy.multiply(pj, jhat)
     direction=(pij - camera.position)

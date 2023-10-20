@@ -1,40 +1,23 @@
 import numpy
 
-class Camera:
-    def __init__(self, position:numpy.array, up:numpy.array, viewpoint: numpy.array, viewDistance: float):
-        self.position = position
-        self.view = viewpoint - position
-        self.view = self.view / numpy.linalg.norm(self.view)
-        self.up = up
-        self.viewDistance = viewDistance
-
-    def __str__(self):
-        return f'Camera: position={self.position}, view={self.view}, self.up= {self.up}, view distance= {self.viewDistance}'
-
-class Ray:
-    def __init__(self, origin, direction:numpy.array):
+class Ray():
+    def __init__(self, origin: numpy.array, direction: numpy.array):
         self.origin = origin
-        if(numpy.linalg.norm(direction) == 1):
-            self.direction = direction
-        else:
-            self.direction = direction / numpy.linalg.norm(direction)
+        self.dir = direction  
 
     def __str__(self):
-        return f'Ray: origin={self.origin}, direction={self.direction}'
+        return f"Ray: r(t) = {self.origin} + t{self.dir}"
 
-def generateRay(camera: Camera, height, width, i, j, vr, hr):
-    pc = numpy.multiply(camera.viewDistance, camera.view)
-    ihat = numpy.cross(camera.up, -camera.view)
-    jhat = camera.up
+    # Evaluates the point corresponding to the ray t value: r(t)
+    def eval(self, t: float):
+        return self.origin + self.dir * t
 
-    pi = ((i+0.5*vr/hr)/hr) - 0.5 
-    pj = ((j+0.5*hr/vr)/vr) - 0.5
+    def transformRay(self,mat):
+        origin = transform(self.origin, mat) 
+        dir = transform(self.dir, mat) 
+        return Ray(origin, dir)
 
-    ihat = numpy.multiply(ihat, width) * width/height
-    jhat = numpy.multiply(jhat, height) * height/width
 
-    pij = pc + numpy.multiply(pi, ihat) + numpy.multiply(pj, jhat)
-    direction=(pij - camera.position)
-    direction = direction / numpy.linalg.norm(direction)
-    return Ray(camera.position, direction)
-
+# Used to generate ray after finding specific viewpoint
+def generateRay(origin: numpy.array, port: numpy.array):
+    return Ray(origin, port-origin)

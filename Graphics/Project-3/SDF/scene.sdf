@@ -1,9 +1,9 @@
 Image: 400 400
-FOV: 75
+FOV: 90
 Camera: T:0/0/-4
-Plane: (Floor) (None) T:2/0/0,RY:90
-Sphere: (Ball) (Floor) 1 T:2/0/0
-Sphere: (Sub-Ball) (Floor) 2 T:0/0/3
+Plane: (Floor) (None) T:3/0/0,RY:-45
+Sphere: (Ball) (None) 1 T:2/0/0
+Sphere: (Sub-Ball) (None) 2 T:0/0/3
 
 
 

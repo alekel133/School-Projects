@@ -56,10 +56,9 @@ def move(val, p: Primitive, objects):
 			theta = degToRad(float(inst[1]))
 			rotatePZ(theta, p)
 
-def genMesh(filename, label, objects):
+def genMesh(filename, mesh, objects):
 	file = open(filename)
-	vertices = list()
-	triangles = list() 
+	vertices = list() 
 	count = 0
 	for line in file:
 		val = line.split()
@@ -70,12 +69,9 @@ def genMesh(filename, label, objects):
 			vertices.append(numpy.array([float(val[1]), float(val[2]), float(val[3])]))
 
 		elif val[0] == "f":
-			t = Triangle(vertices[int(val[1])-1], vertices[int(val[2])-1], vertices[int(val[3])-1], f"{label}-Traingle-{count}, label")
-			addChild(t, objects)
-			triangles.append(t)
-			count += 1
-
-	return triangles
+			t = Triangle(vertices[int(val[1])-1], vertices[int(val[2])-1], vertices[int(val[3])-1], f"{mesh.label}-Traingle-{count}, label", mesh.label)
+			t.mat = transform(t.mat, mesh.mat)
+			mesh.children.append(t)
 
 
 def ParseSDL(filename):
@@ -141,14 +137,14 @@ def ParseSDL(filename):
 		elif val[0] == "Mesh:":
 			label = val[1].strip("()") 
 			parent = val[2].strip("()")	
+			tmp = list()
 			if(parent == "None"):
 				parent = None
 
 			m = Mesh(label, parent)
 			move(val[4], m, objects)
-			m.children = genMesh(val[3], m.label, objects)
+			genMesh(val[3],m,objects)
 			objects.append(m)
-
 
 
 	file.close()

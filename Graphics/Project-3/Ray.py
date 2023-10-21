@@ -14,7 +14,7 @@ class Ray():
 
     def transformRay(self,mat):
         origin = transform(self.origin, mat) 
-        dir = transform(self.dir, mat) 
+        dir = normalize(transform(self.dir, mat))
         return Ray(origin, dir)
 
 

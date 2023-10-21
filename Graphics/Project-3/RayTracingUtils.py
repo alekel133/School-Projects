@@ -1,9 +1,9 @@
 import numpy
 from Camera import *
-from Objects import *
+from Primitive import *
 from Ray import *
 
-def makeRay(camera: Camera, iWidth: int, iHeight: int, i:int, j:int, fov = numpy.pi/2, ortho:bool = False):
+def makeRay(camera: Camera, iWidth: int, iHeight: int, i:int, j:int, fov = numpy.pi/2):
     inv = camera.inv()
     origin = camera.eye
     up = camera.up
@@ -12,10 +12,14 @@ def makeRay(camera: Camera, iWidth: int, iHeight: int, i:int, j:int, fov = numpy
     pc = origin + d
     ap = iWidth/iHeight
 
-    ihat = numpy.cross(up[:3], d[:3])
+    ihat = numpy.append(numpy.cross(up[:3], d[:3]),0)
+    jhat = up
 
-    pc = numpy.array([iWidth/2, iHeight/2, ])
+    pij = pc + ((((i + 0.5)/iWidth)-1/2) * ihat)*fov + ((((j+0.5)/iHeight)-1/2)*jhat)*fov
+
+    return transformRay(generateRay(origin, pij), camera.inv())
+
 def transformRay(ray: Ray, mat: numpy.array):
-    dir = transform(ray.dir, mat)
+    dir = normalize(transform(ray.dir, mat))
     eye = transform(ray.origin, mat)
     return Ray(eye, dir)

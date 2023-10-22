@@ -10,31 +10,23 @@ def genRandColor():
 	b = rand.randint(0,256)
 	return (r, g, b)
 
-def findParentMat(label, objects):
-	if  label == None:
-		return numpy.array(([1,0,0,0],
-					   	   [0,1,0,0],
-					       [0,0,1,0],
-					       [0,0,0,1]))
-
+def findParent(label, objects):
 	for obj in objects:
 		if obj.label == label:
-			return obj.mat
+			return obj
 
-	return numpy.array(([1,0,0,0],
-					   [0,1,0,0],
-					   [0,0,1,0],
-					   [0,0,0,1]))
 
 def addChild(child, objects):
 	for obj in objects:
-		if child.parent == obj.label:
+		if child.parent == None:
+			return
+		if child.parent.label == obj.label:
+			print("True")
 			obj.children.append(child)
 
 
 def move(val, p: Primitive, objects):
 	trans = val.split(",")
-	p.mat = transform(p.mat, findParentMat(p.parent, objects))
 	for t in trans:
 		inst = t.split(":")
 		if inst[0] == "T":
@@ -69,8 +61,7 @@ def genMesh(filename, mesh, objects):
 			vertices.append(numpy.array([float(val[1]), float(val[2]), float(val[3])]))
 
 		elif val[0] == "f":
-			t = Triangle(vertices[int(val[1])-1], vertices[int(val[2])-1], vertices[int(val[3])-1], f"{mesh.label}-Traingle-{count}, label", mesh.label)
-			t.mat = transform(t.mat, mesh.mat)
+			t = Triangle(vertices[int(val[1])-1], vertices[int(val[2])-1], vertices[int(val[3])-1], f"{mesh.label}-Traingle-{count}", mesh, genRandColor())
 			mesh.children.append(t)
 
 
@@ -80,6 +71,7 @@ def ParseSDL(filename):
 	FOV = numpy.pi/2
 	camera = Camera()
 	objects = list()
+	target = None
 	file = open(filename)
 
 	count = 0
@@ -113,43 +105,53 @@ def ParseSDL(filename):
 
 		elif val[0] == "Sphere:":
 			label = val[1].strip("()")
-			parent = val[2].strip("()")	
+			parent = findParent(val[2].strip("()"), objects)
 			if(parent == "None"):
 				parent = None
 
 			radius = float(val[3])
+			if radius <= 1:
+				radius += 1
 			s = Sphere(label, parent, radius, genRandColor())
-			move(val[4], s, objects)
+			if len(val) == 5:
+				move(val[4], s, objects)
+			print(val[4])
 			addChild(s, objects)
 			objects.append(s)
 
 		elif val[0] == "Plane:":
 			label = val[1].strip("()") 
-			parent = val[2].strip("()")	
+			parent = findParent(val[2].strip("()"), objects)
 			if(parent == "None"):
 				parent = None
 
 			p = Plane(label, parent, genRandColor())
-			move(val[3], p, objects)
+			if len(val) == 4:
+				move(val[3], p, objects)
+
 			addChild(p, objects)
 			objects.append(p)
 
 		elif val[0] == "Mesh:":
 			label = val[1].strip("()") 
-			parent = val[2].strip("()")	
+			parent = findParent(val[2].strip("()"), objects)
 			tmp = list()
 			if(parent == "None"):
 				parent = None
 
 			m = Mesh(label, parent)
-			move(val[4], m, objects)
+			if len(val)==5:
+				move(val[4], m, objects)
+				print(val[4])
 			genMesh(val[3],m,objects)
 			objects.append(m)
 
+		elif val[0] == "Target:":
+			target = val[1]
+
 
 	file.close()
-	return ((imgWidth, imgHeight), FOV, camera, objects)
-
+	return ((imgWidth, imgHeight), FOV, camera, target, objects)
 
 
 if __name__ == "__main__":

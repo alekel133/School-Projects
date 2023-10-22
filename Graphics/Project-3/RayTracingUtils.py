@@ -15,7 +15,7 @@ def makeRay(camera: Camera, iWidth: int, iHeight: int, i:int, j:int, fov = numpy
     ihat = numpy.append(numpy.cross(up[:3], d[:3]),0)
     jhat = up
 
-    pij = pc + ((((i + 0.5)/iWidth)-1/2) * ihat)*fov + ((((j+0.5)/iHeight)-1/2)*jhat)*fov
+    pij = pc + ((((i + 0.5)/iWidth)-1/2) * ihat)*(numpy.sin(fov)) + ((((j+0.5)/iHeight)-1/2)*jhat)*(numpy.sin(fov))
 
     return transformRay(generateRay(origin, pij), camera.inv())
 

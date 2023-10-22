@@ -5,6 +5,6 @@ client: client.o
 	
 server: server.o
 	g++ server.cpp -o server	
-	
+
 clean:
 	\rm *.o client server

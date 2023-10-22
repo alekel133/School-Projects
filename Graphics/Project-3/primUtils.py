@@ -3,7 +3,7 @@ from MathUtils import *
 import numpy
 
 def rotatePX(theta, p: Primitive):
-	p.mat = rotateX(theta, p.mat)
+	p.mat = rotateX(theta, p.mat.inv())
 
 def rotatePY(theta, p: Primitive):
 	p.mat = rotateY(theta, p.mat)

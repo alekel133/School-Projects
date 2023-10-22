@@ -1,9 +1,13 @@
-Image: 400 400
+Image: 100 100
 FOV: 90
-Camera: T:0/0/-4
-Plane: (Floor) (None) T:3/0/0,RY:-45
-Sphere: (Ball) (None) 1 T:2/0/0
-Sphere: (Sub-Ball) (None) 2 T:0/0/3
-
-
-
+Camera: T:0/0/-40
+Target: Ball
+Plane: (Floor) (None) T:0/10/0
+Sphere: (Ball) (Body) 5 T:3/0/1
+Sphere: (Wheel-1) (Ball) 1 T:5/7/5
+Sphere: (Wheel-2) (Ball) 1 T:-5/7/5
+Sphere: (Wheel-3) (Ball) 1 T:5/7/-5
+Sphere: (Wheel-4) (Ball) 1 T:-5/7/-5
+Sphere: (ArmBase) (Ball) 1 T:7/0/0
+Sphere: (ArmExt-1) (Ball) 1 T:2/0/0
+Sphere: (ArmExt-2) (ArmExt-1) 1 T:8/0/0

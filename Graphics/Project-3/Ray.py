@@ -13,8 +13,8 @@ class Ray():
         return self.origin + self.dir * t
 
     def transformRay(self,mat):
-        origin = transform(self.origin, mat) 
-        dir = normalize(transform(self.dir, mat))
+        origin = transform(mat, self.origin) 
+        dir = normalize(transform(mat,self.dir))
         return Ray(origin, dir)
 
 

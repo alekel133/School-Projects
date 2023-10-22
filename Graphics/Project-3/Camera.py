@@ -7,6 +7,7 @@ import math
 class Camera(Primitive):
 	def __init__ (self): 
 		self.parent = None
+		self.children = None
 		self.eye = numpy.array([0,0,0,1])
 		self.dir = normalize(numpy.array([0,0,-1,0]))
 		self.up = normalize(numpy.array([0,1,0,0]))

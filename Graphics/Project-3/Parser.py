@@ -1,21 +1,29 @@
+"""
+Author: Alexander Kellough
+NetID: atk133
+
+Description: Functions for parsing custom sdf and .obj files
+"""
 from sys import argv
 import random as rand
 from Camera import *
 from Primitive import *
 from primUtils import *
 
+# Function for Generating Random Colors
 def genRandColor():
 	r = rand.randint(0,256)
 	g = rand.randint(0,256)
 	b = rand.randint(0,256)
 	return (r, g, b)
 
+# Finds object by label
 def findParent(label, objects):
 	for obj in objects:
 		if obj.label == label:
 			return obj
 
-
+# Adds a child to a parent object
 def addChild(child, objects):
 	for obj in objects:
 		if child.parent == None:
@@ -25,6 +33,7 @@ def addChild(child, objects):
 			obj.children.append(child)
 
 
+# Applies transformations to an object
 def move(val, p: Primitive, objects):
 	trans = val.split(",")
 	for t in trans:
@@ -48,6 +57,8 @@ def move(val, p: Primitive, objects):
 			theta = degToRad(float(inst[1]))
 			rotatePZ(theta, p)
 
+
+# Generates mesh from .obj file
 def genMesh(filename, mesh, objects):
 	file = open(filename)
 	vertices = list() 
@@ -65,6 +76,8 @@ def genMesh(filename, mesh, objects):
 			mesh.children.append(t)
 			count += 1
 
+# Parses SDL File (NOTE: These rules are not strictly enforced, some throw appropriate errors, some do not.)
+# FOR GRADER: See attached files scene.sdf and tetrahedron.sdf for examples on usage in the .sdf file format
 def ParseSDL(filename):
 	imgHeight = 100
 	imgWidth = 100
@@ -152,7 +165,7 @@ def ParseSDL(filename):
 	file.close()
 	return ((imgWidth, imgHeight), FOV, camera, target, objects)
 
-
+# If file is run as main, parses .sdf file and prints data to screen
 if __name__ == "__main__":
 	if(len(argv) < 2):
 		raise ValueError("argv[1]: Required Argument <filename> not provided")

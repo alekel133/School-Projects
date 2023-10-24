@@ -24,8 +24,6 @@ if __name__ == "__main__":
 	render = True
 
 	for obj in objects:
-		for child in obj.children:
-			print(child)
 		if obj.label == target:
 			tObj = obj
 	
@@ -42,6 +40,9 @@ if __name__ == "__main__":
 					ray = makeRay(camera, imgWidth, imgHeight, i, j, FOV)
 					intersects = list()
 					for obj in objects:
+
+						# Because Meshes are just lists of triangles, they get their own
+						# Rendering loop.
 						if obj.id == "Mesh":
 							for child in obj.children:
 								hit = child.isHit(transformRay(ray, obj.local()))
@@ -58,9 +59,12 @@ if __name__ == "__main__":
 						out.putpixel((i,j), vis[1])
 
 				render = False
+
+			# Show file
 			out.save(outFile)
 			out.show(outFile)
 
+		# If a target object was specified, Allow user to move it with wasd
 		if tObj != None:
 			key = input()
 			if key == "c":

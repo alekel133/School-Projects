@@ -2,6 +2,7 @@ import numpy
 from MathUtils import *
 from Ray import *
 
+# Base class
 class Primitive():
 	def __init__(self):
 		self.parent = None
@@ -12,9 +13,12 @@ class Primitive():
 							  [0,0,1,0],
 							  [0,0,0,1],))
 
+	# Virtual isHit function
+	# NOTE: Should be overwritten in any derived classes
 	def isHit(self, ray):
 		return (False, None)
 
+	# Returns child str
 	def getChildStr(self):
 		out = ""
 		for child in self.children:
@@ -24,16 +28,20 @@ class Primitive():
 	def inv(self):
 		return numpy.linalg.inv(self.mat)
 
+	# Recursively iterates through parent objects, and returns the composition
+	# of their transformation matrices
 	def local(self):
 		if self.parent == None:
 			return self.mat
 		return transform(self.parent.local(), self.mat)
 
+	# Local but reversed to return to world coords
 	def world(self):
 		if self.parent == None:
 			return self.mat
 		return transform(self.inv(), self.parent.inv())
 
+	# Returns the label of the parent for output
 	def getParentLabel(self):
 		if self.parent == None:
 			return "None"
@@ -54,6 +62,10 @@ class Sphere(Primitive):
 							  [0,0,0,1],))	
 
 	def isHit(self, ray):
+		"""
+		The following code is taken from the notes on meshes by Dr. Jankun-Kelly.
+		As well as being modified/changed to follow my calculations and semantics.
+		"""
 		direction = ray.dir
 		origin = ray.origin
 		center = self.center
@@ -65,7 +77,7 @@ class Sphere(Primitive):
 		if(disc < 0):
 			return (False, None)
 
-		t0 = -b-numpy.sqrt(disc)
+		t0 = -b - numpy.sqrt(disc)
 		t1 = -b + numpy.sqrt(disc)
 
 		if(t1 < 0):
@@ -100,6 +112,9 @@ class Plane(Primitive):
 							  [0,1,0,0],
 							  [0,0,1,0],
 							  [0,0,0,1],))	
+
+	# Chechks if ray is parallel to plane, if not
+	# If not, calculates t, and returns the portion in front of the camera
 	def isHit(self, ray):
 		eye = ray.origin
 		direction = ray.dir
@@ -138,6 +153,8 @@ class Triangle(Primitive):
 							  [0,0,1,0],
 							  [0,0,0,1],))	
 
+	# The following code is modified from https://github.com/jonnovak/ray triangle-test/blob/master/python
+	# Calculates barycentric coordinates
 	def isHit(self, ray):
 		eye = ray.origin
 		direction = ray.dir
@@ -145,26 +162,41 @@ class Triangle(Primitive):
 		p2 = self.p2
 		p3 = self.p3
 
+		# Calculate edges from p1
 		AB = p2-p1
 		AC = p3-p1
 
+		# Project the direction onto AC
 		pvec = numpy.append(numpy.cross(direction[:3], AC[:3]),1)
+
+		# Calculate the denominator of the Barycentric Coordinate equation (Edge x Intersection Edge)/(EdgeAB x EdgeAC)
 		det = numpy.dot(AB, pvec)
+
+		# If this is zero, the plane the triangle sits on is parallel to the ray direction, so return false
 		if det < 0:
 			return (False, None)
 
+		# Since we have to divide by the value, invert it (multiplication is faster than division)
 		invDet = 1/det
+
+		# Get the vector from A to eye
 		tvec = eye - p1
+
+		# Get the area of this new triangle and divide it by the total area to get beta (u)
 		u = numpy.dot(tvec,pvec)*invDet
 		if u < 0 or u > 1:
 			return (False, None)
 
+		# Repeat previous steps to get value for gamma (v)
 		qvec = numpy.append(numpy.cross(tvec[:3], AB[:3]), 1)
 		v = numpy.dot(direction, qvec) * invDet
 
+		# The barycentric coordinates have to be positive, and add up to less than one. The alpha coordinate is left of, because
+		# It is solved for like this: alpha = 1-beta-gamma
 		if v < 0 or u + v > 1:
 			return (False, None)
 
+		# Get the t value
 		t = numpy.dot(AC, qvec) * invDet
 		return (True, (t, self.color))
 
@@ -172,6 +204,9 @@ class Triangle(Primitive):
 		return f"{self.label} (Triangle): Parent={self.getParentLabel()}, Origin={transform(self.origin, self.world())}, P1={transform(self.p1, self.world())}, P2={transform(self.p2, self.world())}, P3={transform(self.p3, self.world())}, Normal={transform(self.normal, self.world())}"
 
 
+# A list for holding triangles
+# Made from Primitive base class, so that sub-meshes
+# Will transform in sync
 class Mesh(Primitive):
 	def __init__(self, label:str, parent: Primitive = None):
 		self.origin = numpy.array([0,0,0,1])

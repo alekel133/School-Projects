@@ -5,7 +5,6 @@ from MathUtils import *
 from primUtils import *
 from RayTracingUtils import *
 import os
-import keyboard
 import numpy
 from PIL import Image
 
@@ -25,6 +24,8 @@ if __name__ == "__main__":
 	render = True
 
 	for obj in objects:
+		for child in obj.children:
+			print(child)
 		if obj.label == target:
 			tObj = obj
 	
@@ -52,14 +53,13 @@ if __name__ == "__main__":
 							if hit[0] == True:
 								intersects.append(hit[1])
 
-					#print(intersects)
 					if len(intersects) > 0:
 						vis = min(intersects, key= lambda t: t[0])
 						out.putpixel((i,j), vis[1])
 
 				render = False
 			out.save(outFile)
-			os.system(f"firefox {outFile}")
+			out.show(outFile)
 
 		if tObj != None:
 			key = input()

@@ -1,0 +1,7 @@
+Triangle-Traingle-0 (Triangle): Parent=Triangle, Origin=[0. 0. 0. 1.], P1=[0. 1. 0. 1.], P2=[0. 0. 0. 1.], P3=[0.70710678 0.         0.70710678 1.        ], Normal=[-0.70710678  0.          0.70710678  0.        ]
+Triangle-Traingle-0 (Triangle): Parent=Triangle, Origin=[0. 0. 0. 1.], P1=[0. 0. 0. 1.], P2=[0. 1. 0. 1.], P3=[ 0.70710678  0.         -0.70710678  1.        ], Normal=[-0.70710678  0.         -0.70710678  0.        ]
+Triangle-Traingle-0 (Triangle): Parent=Triangle, Origin=[0. 0. 0. 1.], P1=[0.70710678 0.         0.70710678 1.        ], P2=[ 0.70710678  0.         -0.70710678  1.        ], P3=[0. 1. 0. 1.], Normal=[8.16496581e-01 5.77350269e-01 5.55111512e-17 0.00000000e+00]
+Triangle-Traingle-0 (Triangle): Parent=Triangle, Origin=[0. 0. 0. 1.], P1=[ 0.70710678  0.         -0.70710678  1.        ], P2=[0.70710678 0.         0.70710678 1.        ], P3=[0. 0. 0. 1.], Normal=[ 0. -1.  0.  0.]
+Triangle-Traingle-0 (Triangle): Parent=Triangle, Origin=[0. 0. 0. 1.], P1=[0. 1. 0. 1.], P2=[0. 0. 0. 1.], P3=[0.70710678 0.         0.70710678 1.        ], Normal=[-0.70710678  0.          0.70710678  0.        ]
+Rendering
+Opening in existing browser session.

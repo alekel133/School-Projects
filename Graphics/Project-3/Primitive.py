@@ -123,8 +123,8 @@ class Plane(Primitive):
 
 class Triangle(Primitive):
 	def __init__(self, P1: numpy.array, P2:numpy.array, P3:numpy.array, label: str, parent:str = None, color: tuple = (0,0,0)):
-		s1 = P2 - P1
-		s2 = P3 - P1
+		s1 = P2-P1
+		s2 = P3-P1
 		self.p1 = numpy.append(P1,1)
 		self.p2 = numpy.append(P2,1)
 		self.p3 = numpy.append(P3,1)
@@ -144,25 +144,29 @@ class Triangle(Primitive):
 		p1 = self.p1
 		p2 = self.p2
 		p3 = self.p3
-		top = numpy.dot(p1-eye, self.normal)
-		bottom = numpy.dot(direction, self.normal)
-		t = top/bottom
 
-		if(t <= 0):
+		AB = p2-p1
+		AC = p3-p1
+
+		pvec = numpy.append(numpy.cross(direction[:3], AC[:3]),1)
+		det = numpy.dot(AB, pvec)
+		if det < 0:
 			return (False, None)
 
-		normal = numpy.append(numpy.cross((p2-p1)[:3],((eye+(direction*t))-p1)[:3]), 1)
+		invDet = 1/det
+		tvec = eye - p1
+		u = numpy.dot(tvec,pvec)*invDet
+		if u < 0 or u > 1:
+			return (False, None)
 
-		areaAB = numpy.dot(normal, numpy.append(numpy.cross((p2-p1)[:3], (t-p1)[:3]),1))
-		areaBC = numpy.dot(normal, numpy.append(numpy.cross((p3-p2)[:3], (t-p2)[:3]),1))
-		areaCA = numpy.dot(normal, numpy.append(numpy.cross((p1-p3)[:3], (t-p3)[:3]),1))
+		qvec = numpy.append(numpy.cross(tvec[:3], AB[:3]), 1)
+		v = numpy.dot(direction, qvec) * invDet
 
-		print(areaAB, areaBC, areaCA)
+		if v < 0 or u + v > 1:
+			return (False, None)
 
-		if(areaAB >= 0 and areaBC >=0 and areaCA >= 0):
-			return(True, (t,self.color))
-
-		return (False, None)
+		t = numpy.dot(AC, qvec) * invDet
+		return (True, (t, self.color))
 
 	def __str__(self):
 		return f"{self.label} (Triangle): Parent={self.getParentLabel()}, Origin={transform(self.origin, self.world())}, P1={transform(self.p1, self.world())}, P2={transform(self.p2, self.world())}, P3={transform(self.p3, self.world())}, Normal={transform(self.normal, self.world())}"

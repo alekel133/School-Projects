@@ -63,7 +63,7 @@ def genMesh(filename, mesh, objects):
 		elif val[0] == "f":
 			t = Triangle(vertices[int(val[1])-1], vertices[int(val[2])-1], vertices[int(val[3])-1], f"{mesh.label}-Traingle-{count}", mesh, genRandColor())
 			mesh.children.append(t)
-
+			count += 1
 
 def ParseSDL(filename):
 	imgHeight = 100
@@ -142,7 +142,6 @@ def ParseSDL(filename):
 			m = Mesh(label, parent)
 			if len(val)==5:
 				move(val[4], m, objects)
-				print(val[4])
 			genMesh(val[3],m,objects)
 			objects.append(m)
 

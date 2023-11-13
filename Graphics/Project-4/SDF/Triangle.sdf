@@ -1,0 +1,6 @@
+Image: 100 100
+FOV: 90
+Target: Triangle
+Camera: T:0/0/-10
+Plane:(Wall) (None)
+Mesh: (Triangle) (None) SDF/tetrahedron.obj

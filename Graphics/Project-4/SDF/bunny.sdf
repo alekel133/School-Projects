@@ -1,0 +1,4 @@
+Image: 100 100
+FOV: 75
+Camera: T:-50/0/-50
+Mesh: (Bunny) (None) SDF/Bunny-LowPoly.obj T:0/0/50,RY:90
